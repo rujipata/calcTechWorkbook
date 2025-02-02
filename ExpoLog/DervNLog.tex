@@ -1,0 +1,231 @@
+%Dave's handout 4.5 Derivatives of Natural Logarithm Functions
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Understand the techniques for differentiating log functions.
+    \item Be able to analyze functions involving log functions.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+   \begin{itemize}
+        \item \emph{Section 2.4 Product and Quotient Rules}
+        \begin{itemize}
+            \item Example 3
+        \end{itemize}
+    \end{itemize}
+    \begin{itemize}
+        \item \emph{Section 2.4 Chain Rule}
+        \begin{itemize}
+            \item Example 7.
+        \end{itemize}
+    \end{itemize}
+
+\item \cite{openstax}\footnotemark[2]\textsuperscript{,}\footnotemark[3]
+    \begin{itemize}
+        \item \emph{Section 3.9 Derivatives of Exponential and Logarithmic Functions}
+        \begin{itemize}
+            \item Derivative of the Logarithmic Function
+        \end{itemize}
+    \end{itemize}
+\item Review previous lessons:
+\begin{itemize}
+    \item Lesson \ref{concavity}: Second Derivative and Concavity
+    \begin{itemize}
+        \item Concavity Test: Determine Concavity and Inflection Values
+    \end{itemize}
+    \item Lesson \ref{optimization}: Optimization
+    \begin{itemize}
+        \item Finding Maxima and Minima of a Function
+    \end{itemize}
+\end{itemize}
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+%\begin{multicols}{2}
+\begin{itemize}
+    \item Differentiation of natural log functions (base $e$).
+\end{itemize}
+%\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+\footnotetext[2]{Available free to download from \url{https://openstax.org/details/books/calculus-volume-1} .}
+\footnotetext[3]{Disregard any examples with trigonometry.}
+
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans15]
+\Opensolutionfile{ansL}[ansL15]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[title = {The Derivative of the Natural Logarithmic Function}{\hypersetup{linkcolor=white}\footnotemark}]
+
+\noindent If $x>0$ and $y=ln(x)$, then
+\begin{equation}\label{eq:dervNlog1}
+\frac{dy}{dx}=\frac{1}{x}
+\end{equation}
+More generally, let $g(x)$ be a differentiable function. For all values of $x$ for which $g'(x)>0$, the derivative of $h(x)=ln(g(x))$ is given by
+\begin{equation}\label{eq:dervNlog1}
+h'(x)=\frac{1}{g(x)} g'(x)
+\end{equation}
+
+\end{tcolorbox}
+%%%%%%%%%%%%%Footnotes from Formula Box%%%%%%%%%%%%%%%%%%%%%%
+\footnotetext{Theorem 3.15 from \cite{openstax} }
+%%%%%%%%%%%%%Footnotes from Formula Box%%%%%%%%%%%%%%%%%%%%%%
+
+%%%Examples%%%
+\begin{example}
+Given $f(x)=\displaystyle\frac{x}{ln(x)}$, answer the following questions:
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+\item Find $f'(x)$.\vspace*{\stretch{1}}
+\item Find all values of $x$ for which the slope of the tangent line to the graph is equal to 0.\vspace*{\stretch{1}}
+\item Find all relative maximum/minimum points. \vspace*{\stretch{1}}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $f'(x)=\displaystyle\frac{ln(x)-1}{[ln(x)]^2}$
+    \item $x=e$
+    \item Relative minimum point at $(e,e)$
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Given $f(x)=ln\left(\displaystyle\frac{1}{x}\right)$, answer the following questions:
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item Find $f'(x)$.\vspace*{\stretch{1}}
+    \item Find the intervals on which the function is increasing and those on which the function is decreasing.\vspace*{\stretch{1}}
+    \item Determine the concavity of the graph and identify all inflection points.\vspace*{\stretch{1}}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $f'(x)=-\displaystyle\frac{1}{x}$
+    \item Decreasing on $(0,\infty)$
+    \item $f''(x)=\displaystyle\frac{1}{x^2}$; Concave up on $(0,\infty)$; no inflection points.
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Given $f(x)=x\cdot ln(x^2)$, answer the following questions:
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item Find $f'(x)$.\vspace*{\stretch{1}}
+    \item Find the intervals on which the function is increasing and those on which the function is decreasing.\vspace*{\stretch{1}}
+    \item Determine the concavity of the graph and identify all inflection points.\vspace*{\stretch{1}}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $f'(x)=2+ln(x^2)$
+    \item Increasing on $\left(-\infty,-\displaystyle\frac{1}{e}\right)\cup \left(\displaystyle\frac{1}{e},\infty\right)$
+    \item $f''(x)=\displaystyle\frac{2}{x}$; Concave down on $(-\infty,0)$; Concave up on $(0,\infty)$; no inflection points.
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Given $f(x)=[1+ln(x)]^2$, answer the following questions:
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item Find $f'(x)$.\vspace*{\stretch{1}}
+    \item Find the intervals on which the function is increasing and those on which the function is decreasing.\vspace*{\stretch{1}}
+    \item Determine the concavity of the graph and identify all inflection points.\vspace*{\stretch{1}}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $f'(x)=\displaystyle\frac{2}{x}(1+ln(x))$
+    \item Increasing on  $\left(\displaystyle\frac{1}{e},\infty\right)$; Decreasing on $\left(0,\displaystyle\frac{1}{e}\right)$
+    \item $f''(x)=-\displaystyle\frac{2}{x^2}\cdot ln(x)$; Concave up on $(0,1)$; Concave down on $(1,\infty)$; inflection point at $(1,1)$.
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Given $f(x)=ln\left(\displaystyle\frac{x}{x+1}\right)$, answer the following questions:
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item Find the domain of $f(x)$. \\
+    Hint: Reveiw \emph{Finding the Domain of a Logarithmic Function} on \emph{6.4 Graphs of Logarithmic Functions} from \cite{openstaxColAlgebra} \footnotemark[1]. \vspace*{\stretch{1}}
+    \item Find $f'(x)$.\vspace*{\stretch{1}}
+     \item Find the intervals on which the function is increasing and those on which the function is decreasing.\vspace*{\stretch{1}}
+    \item Find all relative maximum/minimum points.\vspace*{\stretch{1}}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $(-\infty,-1)\cup (0,\infty)$
+    \item $f'(x)=\displaystyle\frac{1}{x(x+1)}$
+    \item Increasing on $(\infty,-1)\cup (0,\infty)$
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\footnotetext[1]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+\newpage
+%\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+%\begin{multicols}{2}
+\input{ans15}
+%\end{multicols}
+
+

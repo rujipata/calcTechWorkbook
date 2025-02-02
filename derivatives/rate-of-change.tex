@@ -1,0 +1,167 @@
+%Dave's handout 1.7 More on Derivatives
+%Dave's handout 1.8 Derivatives as Rates of Change
+%Dave's handout 3.2 Chain Rule (page 2; Notation and Intuition)
+%Question 1 from Dave'Group Exercise 3.2
+% Use his group exercise 1.8 as HW.
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Understand the interpretation of the derivative of a function as the \textbf{rate of change} (\emph{instantaneous}) of the function
+    \item Understand the concept of \texbf{instantaneous rate of change} of a function.
+    \item Understand how the rate of change of a function can be used in applied analysis.
+    \item Understand the concept of “time rate of change” of a function (ex. profit)
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+   \begin{itemize}
+        \item \emph{Section 2.2 The Derivative Definition of the Derivative}
+        \begin{itemize}
+            \item The \emph{Dropping Totmato} example and the \emph{Growth Bacteria} example. Address the following concepts:
+            \begin{itemize}
+                \item Average velocity vs. Instantaneous velocity
+            \item Secant line vs. tangent line
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Average rate of change
+    \item Instantaneous velocity
+    \item Application to position, velocity and acceleration
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans6]
+\Opensolutionfile{ansL}[ansL6]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Average Rate of Change vs. Instantaneous Rate of Change}
+\noindent Recall that the slope of the tangent line to the graph of a function at a point is the \textbf{rate of change} of the function at that point.  In general (graphs of lines being an exception), the slope of a graph will be changing as we move along the graph.  We also know that the slope of the graph at a point x=a is given by $f'(a)$.  The result is that we interpret the value of $f'(a)$ as the rate of change of the function at $x=a$. \\ 
+
+\noindent Read the \emph{Dropping Totmato} example and the \emph{Growth Bacteria} example in section 2.2 from \cite{Calaway}.
+%%%Examples%%%
+\begin{example}
+Suppose a county has just begun development for large-scale oil extraction.  The population, P, of the county (measured in thousands of people) at a point in time t years from the present is modeled by the function $P(t)=\sqrt{4t^2+5}$, $0\le t \le 10$
+\renewcommand{\labelenumi}{(\Alph{enumi})}
+\begin{enumerate}[leftmargin=*]
+    \item Find the \textbf{predicted rate of change} of the population at time $t=1$ years from the present. 
+     \vspace{0.5in}
+    \item By how many people would you expect the population to change over the year from $t=1$ to $t=2$?  Note:  $P'(1)\approx P(1+1)-P(1)$ or equivalently $P(2)\approx P(1)+P'(1)$.  Compare this approach to the exact value of $P(2)$. 	\vspace{0.5in}		             
+\end{enumerate}
+
+    %%short answer
+    \begin{sol}
+    (A) $P'(1)=\frac{4}{3}$ thousands of people per year.  (B) 	Expect an increase of approximately 1333 people over the next year.  
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\noindent \textbf{Result:} We interpret $P'(t)$ as the expected change in the population if time is increased by 1 year.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+After toxic levels of radon gas are detected in a suburban area, the population, $P$, is to be predicted using the function 
+$P(t)=5000+\displaystyle\frac{2000}{(t+1)}$ people, $t\ge 0$, where t is the number of years from the present ($t=0$).  
+\renewcommand{\labelenumi}{(\Alph{enumi})}
+\begin{enumerate}[leftmargin=*]
+\item What is the \textbf{average} rate of change of the population over the time interval $t=1$ to $t=4$? \vspace{0.5in}
+\item What is the \textbf{average} rate of change of the population over the time interval $t=1$ to $t=1.5$? \vspace{0.5in}
+\item What is the \textbf{instantaneous} rate of change of the population at time $t=1$? \vspace{0.4in}
+\item When is the population decreasing at a \emph{faster} rate:  At $t=3$ years or $t=5$ years? 
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    (A) $-200$ people per year (B) -400 people per year (C) $-500$ people per year (D) $t=3$ years; the rate of decrease is \emph{“slowing down”} as time goes on.  
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+A ball is launched vertically upward from a building that is 100 meters tall with an initial velocity of 150 meters per second.  The position/height, $s$, of the ball with respect to the ground at time $t$ seconds is given by the function $s(t)=-16t^2+150t+100$ meters, $t\ge 0$.  
+\renewcommand{\labelenumi}{(\Alph{enumi})}
+\begin{enumerate}
+    \item What is the velocity of the ball at time $t=0$? \vspace{0.5in}? 
+    \item What is the velocity of the ball at time $t=4$?\vspace{0.5in}
+    \item What is the velocity of the ball equal to zero? (Rounded.)\vspace{0.5in}
+    \item Is the distance from the ball to the ground \emph{increasing} or \emph{decreasing} at time $t=0$ and $t=4$? Why are the values for the velocities negative?\vspace{0.6in}
+    \item When is the ball dropping at a faster rate: At what time ($t=0$ or $t=4$)? Why is there a difference in the velocities? \vspace{0.5in}
+    \item With what velocity will the ball hit the ground?\vspace{0.8in}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    (A) 150 meters per second (B) 22 meters per second (C) $t\approx 4.6875$ seconds (D) \emph{Decreasing}; the distance from the ball to the ground keeps \emph{decreasing}.(E) At $t=4$; the ball is accelerating due to gravity (F) $-170$ meters per second 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\subsection*{The \emph{Leibniz} Notation Form and Intuition of Chain Rule}
+Recall the Chain Rule in lesson \ref{GenPower}: $h'(x)=f'(g(x))\cdot g'(x)$ where $h(x)=(f\circ g)(x)=f(g(x))$. Now, consider a variable $y$ that is a function of an independent variable $u: y=f(u)$.  Also, the variable u is itself a function of another independent variable $x:  u=g(x)$. Using the \emph{Leibniz} notation form, $h'(x)$ can be written as $\displaystyle\frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$\\
+
+\noindent Recall that the derivative of a function may be interpreted as the rate of change of the function, that is, it indicates the rate at which the value of the function is changing as the independent variable changes.  Now consider the “flow of information”:  An input, $x$, to the function $g$ determines an output $u$; this value of $u$ then becomes an input to the function $f$, which results in an output $y$.  As such, we see that $y$ is ultimately a function of $x$ (think of compositions).  What is now of interest is to find the \textbf{rate of change} of $y$ with respect to $x $ , which we recognize as the concept of the derivative of a function.  The result is given by: $\displaystyle\frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$.
+
+%%%Examples%%%
+\begin{example}
+The daily demand for diesel fuel (measured in 50-gallon barrels) in a city is expected to increase over time during the summer months.  The demand, $x$, at a time $t$ days from the present may be modeled by the function $x(t)= .5t^2+900$ barrels; $0\le t\le90$.  At the local refinery, the profit, $P$, (measured in thousands of dollars) when the demand for diesel fuel is $x$ barrels is given by $P(x)=\sqrt{(x+1400)}$ thousands of dollars;$x\ge 1$. 
+\renewcommand{\labelenumi}{(\Alph{enumi})}
+\begin{enumerate}[leftmargin=*]
+    
+    \item 	Find the \textbf{marginal profit} function, $\displaystyle\frac{dP}{dx}$ .  Include the units.\vspace{0.5in}
+    \item Write the profit function $P$ as a function of time, $t$ using the composition of functions $P(x)$ and $x(t)$. \vspace{0.5in}
+    \item Find the “\textbf{time rate of change of profit}”, $\displaystyle\frac{dP}{dt}$ by taking the derivative of the function $P(t)$ with respect to $t$. Include the appropiate units.\vspace{0.8in}
+    \item Again, find the “\textbf{time rate of change of profit}”, $\displaystyle\frac{dP}{dt}$ by using the \emph{Leibniz} notation form as described above this example,  $\displaystyle\frac{dy}{dx}=\frac{dy}{du}\cdot \frac{du}{dx}$. Include the appropiate units. Compare the result to one in the previous part.\vspace{0.8in}
+    \item 	Find the rate at which the refinery’s profit will be changing at time $t=20$ days.
+
+
+\end{enumerate}
+
+    %%short answer
+    \begin{sol}
+    (A) $\displaystyle\frac{dP}{dx}=\frac{1}{2\sqrt{x+1400}}$ thousands of dollars per barrel.  (B) $P(t)=(P\circ x)(t)=P(x(t))=\sqrt{0.5t^2+2300}$ (C) 	$\displaystyle\frac{dP}{dx}=\frac{1}{(2\sqrt{(0.5t^2+2300})}$ (D) same as part (C) (E) 0.2 thousands of dollars per day
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+%%%Short Answers to Examples%%%
+\vspace*{\fill}
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+
+\input{ans6}
+
+
+

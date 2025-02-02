@@ -1,0 +1,195 @@
+%Dave's handout 9.6 Improper Integrals
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Recognize if an integral is an improper integrals.
+    \item Evaluate an integral over an infinite interval.
+    \item Evaluate an integral over a closed interval with an infinite discontinuity within the interval. 
+    \item Apply improper integrals on real-world problems.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+
+\item \cite{openstax}\footnotemark[1]\textsuperscript{,}\footnotemark[2]
+    \begin{itemize}
+        \item \emph{Section 3.7 Improper Integrals}
+        \begin{itemize}
+            \item Integrating over an Infinite Interval
+            \item Integrating a Discontinuous Integrand
+        \end{itemize}
+    \end{itemize}
+
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Improper Integrals
+    \item Evaluating improper integrals
+    \item Convergent improper integrals
+    \item Divergent improper integrals
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{https://openstax.org/details/books/calculus-volume-1} .}
+\footnotetext[2]{Disregard \emph{A Comparison Theorem}.}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans26]
+\Opensolutionfile{ansL}[ansL26]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent In this section, we define integrals over an infinite interval as well as integrals of functions containing a discontinuity on the interval. Integrals of these types are called \emph{improper integrals}. There are several techniques for evaluating improper integrals, all of which involve taking limits.
+
+\subsection*{An Imporoper Integral Over An Infinite Interval}
+
+
+\begin{tcolorbox}[title = {Definition}]
+\begin{enumerate}
+    \item Let $f(x)$ be continuous over an interval of the form $(a,\infty]$. Then
+    \begin{equation}\label{eq:improper1eq}
+        \int_a^{\infty} f(x)\ dx = \lim\limits_{t \to \infty} \int_a^t f(x) \ dx
+    \end{equation}
+   
+    \item Let $f(x)$ be continuous over an interval of the form $(-\infty,b]$. Then
+    \begin{equation}\label{eq:improper2eq}
+        \int_{-\infty}^{b} f(x)\ dx = \lim\limits_{t \to -\infty} \int_t^b f(x) \ dx
+    \end{equation}
+    
+    \item Let $f(x)$ be continuous over $(-\infty,\infty)$. Then
+    \begin{equation}\label{eq:improper3eq}
+        \int_{-\infty}^{\infty} f(x) \ dx = \int_{-\infty}^a f(x) \dx + \int_a^{\infty} f(x) \dx \ \text{for any value of} \ a
+    \end{equation}
+\end{enumerate}
+\end{tcolorbox}
+
+\noindent In each case in \ref{eq:improper1eq} and in \ref{eq:improper2eq}, if the limit exists, the the improper integral is said to \textbf{converge}. If the limit does not exist then the improper integral is said to \textbf{diverge}.\\
+
+\noindent For case in \ref{eq:improper3eq}, $\int_{-\infty}^{\infty} f(x) \ dx$ \textbf{converges} if both $\int_{-\infty}^a f(x) \dx$ and $\int_a^{\infty} f(x) \dx$ converge. If either one or both of these two integrals diverge, then $\int_{-\infty}^{\infty} f(x) \ dx$ \textbf{diverges}.
+
+\begin{example}
+Determine whether the integral below is divergent or convergent. If it is convergent, evaluate it. 
+
+$$\int_{-\infty}^{2} e^x\ dx$$
+
+    %%short answer
+    \begin{sol}
+    7.3891
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{example}
+Determine whether the integral below is divergent or convergent. If it is convergent, evaluate it. 
+
+$$\int_{1}^{\infty} \frac{\ln(x)}{x}\ dx$$
+\vspace*{\stretch{1}}
+    %%short answer
+    \begin{sol}
+    The integral is divergent.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Suppose it is known that, on average, 3 customers per minute visit your website. This being the case, you know that the integral
+
+$$\int_{0}^{m} 3\cdot e^{-3t} \ dt$$
+will calculate the probability that you will have a customer visit in the next $m$ minutes.\\
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}[leftmargin=*]
+    \item What is the percent probability that a customer will visit your website in the next 30 seconds?
+ \vspace*{\stretch{1}}
+    
+    \item Evaluate $\displaystyle\int_0^\infty 3\cdot e^{-3t} \ dt$. Interpret the result.
+\vspace*{\stretch{0.5}}
+ \end{enumerate}   
+ %%short answer
+        \begin{sol}
+        (a) 77.69\% (b) 1 or 100\% It is a certainty that a customer will eventually visit the website.
+        \end{sol}
+        %%solution
+        \begin{solL}
+        Complete solution here.....
+    
+         \end{solL}
+\end{example}
+
+\newpage
+\subsection*{An Improper Integral with A Discontinuous Integrand}
+
+\begin{tcolorbox}[title = {Definition}]
+
+\begin{enumerate}
+    \item Let $f(x)$ be continuous over an interval of the form $[a,b)$. Then
+    \begin{equation}\label{eq:improper4eq}
+        \int_a^{b} f(x)\ dx = \lim\limits_{t \to b^-} \int_a^t f(x) \ dx
+    \end{equation}
+   
+    \item Let $f(x)$ be continuous over an interval of the form $(a,b]$. Then
+    \begin{equation}\label{eq:improper5eq}
+        \int_{a}^{b} f(x)\ dx = \lim\limits_{t \to a^+} \int_t^b f(x) \ dx
+    \end{equation}
+    
+    \item Let $f(x)$ be continuous over $[a,b]$ except at  a point $c$ in $(a,b)$. Then
+    \begin{equation}\label{eq:improper6eq}
+        \int_{a}^{b} f(x) \ dx = \int_{a}^c f(x) \dx + \int_c^{b} f(x) \dx 
+    \end{equation}
+\end{enumerate}
+\end{tcolorbox}
+\noindent In each case in \ref{eq:improper4eq} and in \ref{eq:improper5eq}, if the limit exists, the the improper integral is said to \textbf{converge}. If the limit does not exist then the improper integral is said to \textbf{diverge}.\\
+\noindent For case in \ref{eq:improper6eq}, $\int_{a}^{b} f(x) \ dx$ \textbf{converges} if both $\int_{a}^c f(x) \dx$ and $\int_c^{b} f(x) \dx$ converge. If either one or both of these two integrals diverge, then $\int_{a}^{b} f(x) \ dx$ \textbf{diverges}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Determine whether the integral below is divergent or convergent. If it is convergent, evaluate it. 
+
+$$\int_{3}^{8} \frac{1}{\sqrt{8-x}}\ dx$$
+\vspace*{\stretch{1}}
+    %%short answer
+    \begin{sol}
+    $2\sqrt{5}$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+\input{ans26}
+
+

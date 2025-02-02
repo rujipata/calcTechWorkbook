@@ -1,0 +1,166 @@
+%Dave's handout 5.1 Exponential Growth and Decay Models
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item I can identify a model as being an exponential growth or exponential decay model.
+	\item Given either an exponential growth model or a decay model, I can solve for an unknown variable in the context of a problem using the differentiation technique I learned from the previous lessons. 
+	\item Given either an exponential growth model or a decay model,I can differentiate and interpret the growth rate, decay rate and rate of change in the context of a problem.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{openstaxColAlgebra}\footnotemark[1]
+    \begin{itemize}
+        \item \emph{Section 6.7 Exponential and Logarithmic Models}
+        \begin{itemize}
+            \item Model exponential growth and decay.
+        \end{itemize}
+    \end{itemize}
+   
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+%\begin{multicols}{2}
+\begin{itemize}
+    \item Differential equations.
+    \item Growth constant and decay constant.
+    \item Rate of change.
+    \item Models for exponential growth and decay.
+    \item Half-life in an exponential decay process.
+\end{itemize}
+%\end{multicols}
+\end{framed}
+
+\footnotetext[1]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans17]
+\Opensolutionfile{ansL}[ansL17]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{tcolorbox}[title = {Exponential Growth and Decay Models}]
+
+\noindent The exponential growth (or decay) occurs when a quantity grows(or decreases) at a rate proportional to its size. The mathematical model for \textbf{exponential growth} or \textbf{decay} is given by
+\vspace{-0.2cm}
+\begin{equation}
+    f(t) = Ce^{kt}
+\end{equation}
+
+\textbf{If} $\bm{k>0}$ \textbf{, the function models the amount, or size, of a growing entity.} $C$ is the original amount, or size, of the growing entity at time $t=0$, $f$ is the amount at time $t$, and $k$ is a constant representing the \textbf{growth rate}.\\
+
+\textbf{If} $\bm{k<0}$ \textbf{, the function models the amount, or size, of a density entity.} $C$ is the original amount, or size, of the decay entity at time $t=0$, $f$ is the amount at time $t$, and $k$ is a constant representing the \textbf{decay rate}.
+
+\end{tcolorbox}
+\vspace{0.5 in}
+\begin{tcolorbox}[title = {Differential Equation}]
+A differential equation is an equation that contains an \emph{unknown function} and its \emph{derivative}.
+\end{tcolorbox}
+\vspace{2 in}
+\begin{tcolorbox}[title = {Differential Equation of Exponential Growth and Decay Models}]
+The differential equation of the exponential function of the form $f(t)=Ce^kt$ is
+$$f'(t)=k\cdot f(t)$$
+\noindent An exponential function of the form $f(t)=Ce^kt$ has the interesting property that\\ $f'(t)=k\cdot f(t)$.  If the independent variable $t$ represents time, the interpretation is that the rate at which these functions are changing at any point in time is proportional to the size of the function at that time.  %We will look at various applications of functions that fit this form. 
+\end{tcolorbox}
+
+
+\newpage
+\subsection*{Exponential Growth Models}
+
+%%%Examples%%%
+\begin{example}
+The number of a certain type of mountain beetle that kills pine trees has been increasing in forests across western Canada.  Sampling at various locations in a particular area has indicated that the number, $N$, of beetles is growing at a rate that is proportional to the number of beetles that are present (we say that the number of beetles is growing “\emph{exponentially}” or growing at an “\emph{exponential rate}”).  Given this observation, the number of beetles in this area at time $t$ months from the present $(t=0)$ may be modeled by the function
+$$\bm{N(t)=N_0 e^{kt}}\qquad \bm{;t\ge 0}$$
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item Suppose that initially, 2500 beetles were assumed to be in this area of the forest.  Four months later the number had grown to 4000.  Determine the function $N(t)$ that would be appropriate.  \vspace*{\stretch{2}}	
+    \item Write the \textbf{differential equation} of the beetle model found in part (a).\vspace*{\stretch{0.5}} 
+    \newpage
+    \item Show that the rate at which the number of beetles increase \textbf{proportional} to the number of beetles at a particular point in time.\\[10pt]
+    Hint: (1) Find $N'(t)$ (2) To determine how the rate of growth in the number of beetles,  $N'(t)$, related to the number of beetles, $N(t)$, write $N'(t)$ as a function of $N(t)$. \vspace*{\stretch{1}}  
+    
+    \item At time $t=4$, is the number of beetles increasing or decreasing? At what rate? Use a \textbf{differential equation} to determine the rate.  \vspace*{\stretch{0.75}}  
+    \newpage
+    \item In the long-run, what will happen to the number of beetles according to the model given above?\vspace*{\stretch{0.5}}	
+    \item For this area, it is believed that the forest cannot recover from the damage done by the beetles if the number of beetles reaches 10,000.  According to the model determined in part (a), at what time will the number of beetles reach 10,000? \vspace*{\stretch{1}}  
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $k=\dfrac{ln\left(\dfrac{40}{25}\right)}{4}\approx 0.1175$, $N(t)=2500e^{0.1175t}$
+    \item $\lim\limits_{t\rightarrow \infty} N(t)=\infty \Longrightarrow$ the number of beetles are increasing without bound.
+    \item $N'(t)=k\cdot N(t)$ where $k\approx 0.1175$ is determined in part(a) and is a constant.
+    \item $N'(4)\approx 470$ beetles per month
+    \item $t\approx 11.8$ months 
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+\subsection*{Exponential Decay Models}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+After an injection of a drug into a patient’s bloodstream, the amount, $A$, of the drug tends to decrease at a rate that is proportional to the amount of the drug still present in the blood.  If $A(t)=$ the amount (in milligrams) of the drug in the blood at time $t$ hours after the injection, then $A'(t)=-\lambda\cdot A(t)$, where $\lambda$ is a positive constant referred to as the \textbf{decay constant}, or in the context of this application, the “elimination rate” of the drug.  For a particular drug, suppose $\lambda=0.45$.
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+\item Identify the appropriate form of the function A(t).\vspace*{\stretch{1}} 
+\item How long will it take for the amount of the drug remaining in the bloodstream to be reduced to 40\% of the initial amount injected?  \vspace*{\stretch{1}} 
+%\item At what point in time is the amount of the drug decreasing at its fastest rate?     \vspace*{\stretch{1}} 
+\newpage
+\item DEFINITION:  The \textbf{half-life} of a drug is the amount of \textbf{time} that it takes a drug to be reduced to an amount that is one-half of its’ initial (or current) amount. Determine the \textbf{half-life} of the drug.\\ 
+\vspace*{\stretch{1}} 
+
+\renewcommand{\labelenumii}{\textbf{(\arabic{enumii})}}
+\textbf{NOTE:}  
+\begin{enumerate}[leftmargin=*]
+    \item The half-life of the drug does not depend on the initial amount of the drug.  For example, 10 mg. of the drug will be reduced to 5 mg. in about 1.54 hours, and 100 mg. will be reduced to 50 mg. in the same amount of time. 
+    \item The amount of the drug will continue to be reduced by a factor of one-half over each time interval equal to the half-life.  In this case, the amount will be reduced to one-half of the current amount approximately every 1.54 hours.
+\end{enumerate}
+\item If 80 mg. of the drug are injected, according to this model what is the rate of decrease of the drug at time $t=3$ hours after injection?\vspace*{\stretch{1}} 
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+   \onehalfspacing{
+    \begin{enumInline1}
+    \item $A(t)=A_0e^{-0.45t}$; $t\ge 0$
+    \item $t\approx 2.04$ hours
+    \item $t=0$ 
+    \item $t\approx 1.54$ hours
+    \item $A'(3)\approx -9.33$ mg. per hour
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+%\begin{multicols}{2}
+\input{ans17}
+%\end{multicols}
+
+

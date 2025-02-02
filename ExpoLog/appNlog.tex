@@ -1,0 +1,241 @@
+%Dave's handout 5.3 Applications of Natural Log Functions
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Understand the concepts of relative/percentage rate of change vs. the rate of change of a function given by $f'(x)$.
+    \item Understand when and how logarithmic differentiation is used to determine relative/percentage rates of change.
+    \item Be convinced that logarithmic differentiation is definitely preferred in some cases (and know which cases).
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{openstaxColAlgebra}\footnotemark[1]
+    \begin{itemize}
+        \item \emph{Section 6.5 Logarithmic Properties}
+    \end{itemize}
+
+\item \cite{openstax}\footnotemark[2]\textsuperscript{,}\footnotemark[3]
+    \begin{itemize}
+        \item \emph{Section 3.9 Derivatives of Exponential and Logarithmic functions}
+        \begin{itemize}
+            \item Logarithmic Differentiation
+        \end{itemize}
+    \end{itemize}
+        
+  
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Relative rates of change
+    \item Percentage rate of change
+    \item Logarithmic differentiation
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+\footnotetext[2]{Available free to download from \url{https://openstax.org/details/books/calculus-volume-1} .}
+\footnotetext[3]{Disregard any examples with trigonometry.}
+
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans19]
+\Opensolutionfile{ansL}[ansL19]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The rate of change of a function $f(t)$ has been defined as being given by the derivative $f'(t)$.  While the rate of change does provide useful information about the function, it is sometimes more informative to consider the rate of change relative to the size of the function.  We refer to this as the \textbf{relative rate of change} and determine it by finding the ratio $\displaystyle\frac{f'(t)}{f(t)}$ .  When this ratio is express as a percentage (multiply by 100), it is referred to as the \textbf{percentage rate of change} of $f(t)$. 
+
+\begin{tcolorbox}[title = {Finding Relative Rate of Change (Direct Approach)}]
+
+\begin{enumerate}[leftmargin=*]
+    \item Find $f'(t)$.
+    \item Form the ratio $\displaystyle\frac{f'(t)}{f(t)}$.
+\end{enumerate}
+
+\end{tcolorbox}
+
+\noindent Since it can be shown that $\displaystyle\frac{d}{dt}ln[f(t)]=\displaystyle\frac{f'(t)}{f(t)}$, the \textbf{logarithmic differentiation} approach as described below can be an alternative approach to find the relative rate of change. For \emph{some functions}, this approach  may be more efficient than a direct approach.\\
+
+\begin{tcolorbox}[title = {Finding Relative Rate of Change (Logarithmic Differentiation Approach)}]
+
+\begin{enumerate}[leftmargin=*]
+    \item Given a function $f(t)$, find $ln[f(t)]$. Use properties of logarithms to expand $ln[f(t)]$ as much as possible.
+    \item Differentiate $ln[f(t)]$.
+\end{enumerate}
+
+\end{tcolorbox}
+ 
+ \begin{tcolorbox}[title = {Review: Logarithmic Properties }]
+\vspace{-0.8cm}
+\begin{equation}
+\ln(e) = 1
+\end{equation}
+\vspace{-0.8cm}
+\begin{equation}
+\ln(1) = 0
+\end{equation}
+\vspace{-0.8cm}
+\begin{equation}
+\ln(e^x) =x \quad \text{for any real number} x
+\end{equation}
+\vspace{-0.8cm}
+\begin{equation}
+e^{\ln(x)}=x \quad \text{for any} \quad x>0
+\end{equation}
+\vspace{-0.8cm}
+\begin{equation}
+\text{Product Rule: } \ln(M \cdot N)=ln(M) +ln(N)
+\end{equation}
+\vspace{-0.8cm}
+\begin{equation}
+\text{Quotient Rule: } \ln\left(\frac{M}{N}\right)=\ln(M) - \ln(N) 
+\end{equation}
+\vspace{-0.8cm}
+\begin{equation}
+\text{Power Rule: } \ln(M^r) = r \cdot \ln(M)
+\end{equation}
+
+\end{tcolorbox} 
+%%%Examples%%%
+\begin{example}
+The value, V, of a stock portfolio at time t years in the future is to be modeled by the function $V(t)=200,000e^{0.4\sqrt{t}}$ dollars (not an exponential growth model).  
+\newpage
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item Using the \textbf{Direct approach}, find the \textbf{relative rate of change} of $V$. Then, interpret the results. \vspace{2in}
+    \item Using the \textbf{Logarithmic approach}, find the \textbf{relative rate of change} of $V$. \vspace{2in}
+    \item By hand, (1) find the rate of change of the stock portfolio at $t=3$. (2) find the percent rate of change of the stock portfolio at $t=3$.\vspace{1.5in}
+    \item Using Desmos, make a table of values of $V(t)$,$V'(t)$, and percent rate of change of the stock portfolio at $t=1,2,...,10$.  Interpret the results.\vspace*{0.1in}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $\displaystyle\frac{V'(t)}{V(t)}=\displaystyle\frac{0.2}{\sqrt{t}}$; Value is expect to increase by 11.5\%/years; 8.2\%/year; 6.3\%/year at these times.
+    \item $ln(V(t))=ln(200,000)+0.4\sqrt{t}$; $\displaystyle\frac{d}{dt}ln[f(t)]=\displaystyle\frac{0.2}{\sqrt{t}}$
+    \item $V'(t)= \displaystyle\frac{40,000e^{0.4\sqrt{t}}}{\sqrt{t}}$; $V'(3)\approx$ \$46,173 per year; 
+    \item \href{https://www.desmos.com/calculator/auust4aaoh}{https://www.desmos.com/calculator/auust4aaoh}.
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    \hfill 
+    \renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item \hfill 
+    \newline 
+    \textbf{Find} $\bm{v'(t)}$\textbf{:}
+\begin{displaymath}
+        \begin{split}
+            v(t)&=200,000e^{0.4\sqrt{t}} \quad \text{Let} \: u(t)=0.4\sqrt{t}\\
+            v(u(t))&=200,000e^{u(t)}\quad \text{Rewrite}\: V \: \text{as a function of} \: u(t)\\
+            \frac{d}{dt}[v(u(t))]&=\frac{d}{dt}\left[200,000e^{u(t)}\right]  \quad \text{Differentiate} \: V \,\text{with respect to}\: t\\
+            &=200,000\frac{d}{dt}\left[e^{u(t)}\right]\quad \text{Constant Multiple Constant Rule}\\
+            &=200,000\frac{d}{du}\left[e^{u}\right]\cdot \frac{du}{dt}\quad \text{Chain Rule}\\
+            &=200,000\cdot e^{u}\cdot \frac{du}{dt}\quad \text{Derivative of Natural Exponential Function}\\
+            &=200,000\cdot e^{0.4\sqrt{t}}\cdot \frac{d}{dt}[0.4\sqrt{t}] \quad \text{Rewrite $u$ as a function of $t$}\\
+            &=200,000\cdot e^{0.4\sqrt{t}}\cdot \frac{0.2}{\sqrt{t}}\quad \text{See \emph{Side Note} below for}\: \frac{d}{dt}[0.4\sqrt{t}]=\frac{0.2}{\sqrt{t}}\\
+            V'(t)&=\frac{40,000\cdot e^{0.4\sqrt{t}}}{\sqrt{t}} \quad \text{Simplify and rewrite}
+        \end{split}
+    \end{displaymath}
+\emph{Side Note:}
+\begin{displaymath}
+        \begin{split}
+            \hspace{2.5cm}\frac{d}{dt}[0.4\sqrt{t}]&=0.4\cdot\frac{d}{dt}[\sqrt{t}]\\
+            &=0.4\cdot\frac{d}{dt}[t^{\frac{1}{2}}] \quad \text{Rewrite radical expression as expression with rational exponent}\\
+            &=0.4\cdot \frac{1}{2}\cdot t^{\frac{1}{2}-1} \quad \text{Power Rule}\\
+            &=0.4\cdot \frac{1}{2}\cdot t^{-\frac{1}{2}} \\
+            &=\frac{0.2}{\sqrt{t}} \quad \text{Simplify and Rewrite}
+        \end{split}
+    \end{displaymath}
+\textbf{Form  $\dfrac{\bm{V'(t)}}{\bm{V(t)}}$ and Simplify: }
+\begin{displaymath}
+    \begin{split}
+        \frac{V'(t)}{V(t)}&=\frac{\dfrac{40,000\cdot e^{0.4\sqrt{t}}}{\sqrt{t}}}{200,000e^{0.4\sqrt{t}} } \\
+        &=\frac{40,000\cdot \Ccancel[red]{e^{0.4\sqrt{t}}}}{\sqrt{t}}\cdot \frac{1}{200,000\cdot \Ccancel[red]{e^{0.4\sqrt{t}}}}  \quad \text{Simplify}\\
+        &=\frac{1}{5\sqrt{t}} \quad \textbf{Relative Rate of Change}
+    \end{split}
+\end{displaymath} 
+\newpage
+\item \hfill \\
+\newline
+\textbf{Use properties of logarithms to expand $ln[f(t)]$ as much as possible:}
+\begin{displaymath}
+    \begin{split}
+        v(t)&=200,000e^{0.4\sqrt{t}} \\
+        \ln[v(t)]&=\ln\left[200,000e^{0.4\sqrt{t}}\right] \\
+        &=\ln(200,000)+\ln\left(e^{0.4\sqrt{t}}\right) \quad \text{Log Property: Product Rule}\\
+        &=\ln(200,000)+0.4\sqrt{t}\cdot\ln(e) \quad \text{Log Property: Power Rule}\\
+        &=\ln(200,000)+0.4\sqrt{t} \quad \text{Simplify:} \ln(e)=1\\
+    \end{split}
+\end{displaymath}
+\textbf{Differentiate $\ln[V(t)]$ with respect to $t$}
+\begin{displaymath}
+    \begin{split}
+    V(t)&=\ln(200,000)+0.4\sqrt{t}\\
+        \frac{d}{dt}[\ln[V(t)]&=\frac{d}{dt}[\ln(200,000)+0.4\sqrt{t}] \\
+        &=\frac{d}{dt}[\ln(200,000)]+\frac{d}{dt}[0.4\sqrt{t}] \quad \text{Sum Rule} \\
+        &=0+\frac{d}{dt}[0.4\sqrt{t}] \quad \text{Constant Rule} \\
+        &=\frac{d}{dt}[0.4t^{\frac{1}{2}}] \quad \text{Rewrite radical expression as expression with rational exponent}\\
+        &=0.4\cdot \frac{d}{dt}[t^{\frac{1}{2}}] \quad \text{Constant Multiple Rule}\\
+        &=0.4\cdot \frac{1}{2}\cdot t^{\frac{1}{2}-1} \quad \text{Power Rule}\\
+        &=0.2\cdot t^{-\frac{1}{2}} \quad \text{Simplify}\\
+        &=\frac{0.2}{\sqrt{t}} \quad \textbf{Relative Rate of Change}
+    \end{split}
+\end{displaymath}
+\emph{Note:} Relative Rate of Change $\frac{d}{dt}[\ln[V(t)]=\dfrac{0.2}{\sqrt{t}}=\dfrac{\dfrac{2}{10}}{\sqrt{t}}=\dfrac{2}{10\sqrt{t}}=\dfrac{1}{5\sqrt{t}}$ which is the \underline{same as} the result of $\frac{V'(t)}{V(t)}$ found in part (a).
+
+\item \hfill \\
+\newline
+\textbf{Rate of Change:}\\
+\begin{displaymath}
+    \begin{split}
+        V'(t)&=\frac{40,000\cdot e^{0.4\sqrt{t}}}{\sqrt{t}}\quad \text{from part (a)}\\
+        V'(3)&=\frac{40,000\cdot e^{0.4\sqrt{3}}}{\sqrt{3}} \quad \text{Evaluate $V'(t)$ at $t=3$}\\
+        &\approx 46,172.9271 dollars per year
+    \end{split}
+\end{displaymath}
+The value of stock portfolio is \underline{increasing} at the \underline{rate of 46,172.9271 dollars per year}.
+\flushleft\textbf{Relative Rate of Change:}\\
+Using either the direct approach in part (a) or the differentiation approach in part (b), the Relative Rate of Change (ROC) is $\text{ROC}=\dfrac{1}{5\sqrt{t}}$.\\
+\begin{displaymath}
+    \begin{split}
+        \text{ROC}(t)&=\dfrac{1}{5\sqrt{t}}\quad \text{from part (a) and part (b)}\\
+        \text{ROC}(3)&=\dfrac{1}{5\sqrt{3}}\approx 0.1155  \quad \text{Evaluate $ROC(t)$ at $t=3$}\\
+    \end{split}
+\end{displaymath}
+At $t=3$ years,the value of the stock portfolio is increasing by about $0.1155\times 100=11.55$\% (about 11.55\% of the stock value in the third year, $V(3)$).
+\end{enumerate}
+\end{solL}
+    
+\end{example}
+\
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+%\begin{multicols}{2}
+\input{ans19}
+%\end{multicols}
+%\newpage
+%\subsection*{Detailed Solutions to Examples}
+%\input{ansL19}
+
+

@@ -1,0 +1,282 @@
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item State the chain rule for the composition of two functions.
+    \item Be able to differentiate a composite function using the \emph{Chain Rule} together with \emph{Power Rule}, so called \emph{General Power Rule}.
+    \item Apply the \emph{General Power Rule} with the \emph{elasticity of demand} in Economics. 
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+   \begin{itemize}
+        \item \emph{Section 2.5 Chain Rule}
+        \begin{itemize}
+            \item Skip the following examples: 4, 7 and 8.\footnotemark[2] 
+        \end{itemize}
+        \item Section 2.10 Other Applications
+        \begin{itemize}
+            \item Elasticity
+        \end{itemize}
+    \end{itemize}
+
+\item \cite{openstax}\footnotemark[3]\textsuperscript{,}\footnotemark[4]
+    \begin{itemize}
+        \item \emph{Section 3.6 The Chain Rule}
+        \begin{itemize}
+            \item The Chain and Power Rules Combined
+            \begin{itemize}
+                \item Example 3.48 and Example 3.50
+            \end{itemize}
+            \item The Chain Rule Using Leibniz's Notation
+            \begin{itemize}
+                \item Example 3.58
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    
+\item \cite{openstaxColAlgebra}\footnotemark[5]
+    \begin{itemize}
+        \item \emph{Review} section 3.4 Composition of Functions
+    \end{itemize}
+
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Composition of functions
+    \item Chain Rule
+    \item General Power Rule
+    \item Elasticity of Demand 
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+\footnotetext[2]{Disregard any examples with exponential functions and logarithmic functions. We will discuss the General Power Rule together with these functions in the future lessons.}
+\footnotetext[3]{Available free to download from \url{https://openstax.org/details/books/calculus-volume-1} .}
+\footnotetext[4]{Disregard any examples with trigonometry.}
+\footnotetext[5]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans5]
+\Opensolutionfile{ansL}[ansL5]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent We have learned how to apply the basic differentiation rules on basic functions in section \ref{diffRules}. In this section, we will discuss how to differentiate \emph{composition of functions}\footnotemark[1] by using the \emph{Chain Rule} together with the \emph{Power Rule}. These two rules together are so called the \emph{General Power Rule}. We will then apply the rule with the \emph{elasticity of demand} in Economics.
+\footnotetext[1]{You may review this topic from section 3.4 on \cite{openstaxColAlgebra} which is available free to download from \url{https://openstax.org/details/books/college-algebra}}
+\section*{The Chain Rule}
+%%%%Example 1 from Calaway--Applied Calculus; page 114%%%%%%%%%%%
+\begin{example}\label{exChain1}
+Given $g(x)=(4x^3+15x)^2$, find $g'(x)$ using the basic differentiation rules in section \ref{diffRules}.\\
+
+\noindent Solution:\\\\
+This is not a simple polynomial, so we can’t use the basic rules yet. It is a product, so we could first "multiply it out" and then use the basic rule(s) to find the answer.\\\\
+$g(x)=(4x^3+15x)^2=(4x^3+15x)(4x^3+15x)=16x^6+120x^4+225x^2$\\\\
+\noindent $g'(x)=\rule{10cm}{0.25mm}$
+
+    %%short answer
+    \begin{sol}
+    $g'(x)=96x^5+480x^3+450x$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\noindent Suppose we want to find the derivative of $h(x)=(4x^3+15x)^{20}$. Similar to Example \ref{exChain1}, we could write it as a product with 20 factors and use the product rule, or we could use the \emph{Chain Rule} together with the \emph{Power Rule}, but how?\\
+
+\noindent The \emph{Chain Rule} is the most common place for students to make mistakes. Part of the reason is that the notation takes a little getting used to. And part of the reason is that students often forget to use it when they should. Fortunately, with some practice, the Chain Rule is also easy to use. 
+\noindent When should you use the Chain Rule? Almost every time you take a derivative. You will need the Chain Rule hundreds of times in this course. It is a powerful tool that leads to important applications in a variety of field. 
+%%%%%%%%%%%%%The Chain Rule box%%%%%%%%%%%%%%%%%%
+%%%% Openstax, Calculus I; page 288 %%%%%%%%%%%%%%%%
+\begin{tcolorbox}[title = {The Chain Rule}]
+
+\noindent Let $f(x)$ and $g(x)$ be functions. For all $x$ in the domain of $g$ for which $g$ is differentiable at $x$ and $f$ is differentiable at $g(x)$, the derivative of the \emph{composite function} \\
+\begin{equation}
+    h(x)=(f\circ g)(x)=f(g(x))
+\end{equation}
+is given by
+\begin{equation}
+    h'(x)=f'(g(x))\cdot g'(x)
+\end{equation}
+\noindent In other words, the derivative of a composition of a function (denoted as \((f\circ g)'(x)\) is the derivative of the outside function $f$ (with respect to the original inside function) \emph{times} the derivative of the inside function $g$.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Applying the Chain Rule %%%%%%%%%%%%%%%%%%
+%%%% Openstax, Calculus I; page 288 %%%%%%%%%%%%%%%%
+\begin{tcolorbox}[title = {Steps to Apply The Chain Rule}]
+\begin{enumerate}
+    \item To differentiate \(h(x)=f(g(x))\), begin by identifying \(f(x)\) and \(g(x)\).
+    \item Find $f'(x)$ and evaluate it at $g(x)$ to obtain $f'(g(x))$.
+    \item Find $g'(x)$.
+    \item Write \(h'(x)=f'(g(x))\cdot g'(x)\)
+\end{enumerate}
+\emph{Note:} When applying the chain rule to the composition of two or more functions, keep in mind that we \underline{work our way from the outside function in}. It is also useful to remember that the derivative of the composition of two functions can be thought of as having two parts; the derivative of the composition of three functions has three parts; and so on. Also, remember that we never evaluate a derivative at a derivative.
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%Example 3 from Calaway, Applied Calculus; page 115%%%
+\begin{example}\label{exChain2}
+Again, let's consider the function $h(x)=(4x^3+15x)^{20}$. Following the \emph{Steps to Apply The Chain Rule}, find the derivative of $h(x)$.\\
+\begin{enumerate}[leftmargin=*]
+    \item Identifying \(f(x)\) and \(g(x)\):\\\\
+    Outside Function: $f(x)=\rule{10cm}{0.25mm}$\\\\
+    Inside Function: $g(x)=\rule{10cm}{0.25mm}$\\
+    \item Find $f'(x)$ and evaluate it at $g(x)$ to obtain $f'(g(x))$.\vspace{0.5in}
+    \item Find $g'(x)$.\vspace{0.15in}
+    \item Write \(h'(x)=f'(g(x))\cdot g'(x)\)\vspace{0.15in}
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    $h'(x)=20(4x^3+15x)^{19}\cdot (12x^2+15)$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+%%%Example 4 from Dave's handout 1.6 Rules for Differentiation%%%
+\begin{example}\label{exGenPowerRule2}
+Given $h(x)=\sqrt{x^2+2}$, find $h'(x)$ by following the four Steps to Apply The Chain Rule. Then, determine all values of x for which the slope of the tangent line is zero (horizontal line).          
+    %%short answer
+    \begin{sol}
+    $h'(x)=\displaystyle\frac{x}{\sqrt{x^2+2}}$; $x=0$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent As you can see from Example \ref{exChain2} and \ref{exGenPowerRule2}, the \emph{Chain Rule} provides an easier way to differentiate a more complicated function like the composition in the examples. The \emph{Chain Rule} is a little complicated, but it saves us the much more complicated algebra of multiplying something like ones in these examples. It will also handle compositions where it would not be possible to “multiply it out.”
+%%%%%%%%%%%%%%%%Section: General Power Rule%%%%%%%%%%%
+\section*{The Chain and Power Rules Combined\footnotemark[1]}
+
+%%Openstax, Calculus I; page 289%%%%%%%%%%%%%%%%
+We can now apply the chain rule to composite functions, but note that we often need to use it with other rules. For example, to find derivatives of functions of the form $h(x)=[g(x)]^n$, we need to use the chain rule combined with the power rule. To do so, we can think of $h(x)=[g(x)]^n$ as $f(g(x))$ where $f(x)=x^n$. Then \(f'(x)=n \cdot x^{n-1}\). Thus, $f'(g(x))=n \cdot [g(x)]^{n-1}$. This leads us to the derivative of a \emph{power function} using the \emph{chain rule}, so called \emph{the General Power Rule}.
+%%%%%%%%%%%% General Power Rule Box %%%%%%%%%%%%%
+\begin{tcolorbox}[title = {The General Power Rule}]
+
+\noindent For all values of $x$ for which the derivative is defined, if
+\vspace{-0.25cm}
+\begin{equation}\label{eq:powerFn}
+h(x)=[g(x)]^n
+\end{equation}
+Then
+\begin{equation}\label{eq:GenPowerRule}
+h'(g(x))=n \cdot [g(x)]^{n-1} g'(x)
+\end{equation}
+
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Footnotes for the General Power Rule Box %%%%%%%%%%
+\footnotetext[1]{In the future lessons, we will further examine how to combine the chain rule with the other rules we have not learned. In particular, we can use it with the \emph{product rule} or with the \emph{quotient rule} which will be discussed in lesson \ref{productQuotient}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%Example 3 from Calaway, Applied Calculus; page 115%%%
+\vspace{-0.2cm}
+\begin{example}\label{exGenPowerRule1}
+Again, let's consider the function $h(x)=(4x^3+15x)^{20}$. Using the \underline{General Power Rule} in equation \ref{eq:GenPowerRule}, find the derivative of $h(x)$. Which method do you prefer? Using the \underline{Chain Rule} in Example \ref{exChain2} or using the \underline{General Power Rule} in this example?
+    %%short answer
+    \begin{sol}
+    $h'(x)=20(4x^3+15x)^{19}\cdot (12x^2+15)$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace{0.8in}
+
+%%%Example 2 from Dave's handout 3.2 Chain Rule and General Power Rule%%%
+\begin{example}\label{exGenPowerRule3}
+Given $f(x)=x^2$  and $g(x)=\displaystyle\frac{1}{x-1}$, let \(h(x)=(f\circ g)(x)\). Find $h(x)$ and  $h'(x)$. Then, find the \underline{slope} of the tangent line to the graph of $h$ at $x=0$.
+
+ %%short answer
+    \begin{sol}
+    $h(x)=\displaystyle\frac{1}{(x-1)^2}$; $h'(x)=\displaystyle\frac{-2}{(x-1)^3}$ ; $m=2$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%%%Example 2 from Dave's handout 3.2 Chain Rule and General Power Rule%%%
+\begin{example}\label{exGenPowerRule4}
+Given $f(x)=x^2$  and $g(x)=\displaystyle\frac{1}{x-1}$, let \(w(x)=(g\circ f)(x)\). Find $w(x)$ and $w'(x)$. Then, find the \underline{equation} of the tangent line to the graph of $w$ at point $(0,-1)$. What is the \underline{slope} of the tangent line?
+
+ %%short answer
+    \begin{sol}
+    $w(x)=\displaystyle\frac{1}{x^2-1}$; $w'(x)=\displaystyle\frac{-2x}{(x^2-1)^2}$ ; $y=-1$; $m=0$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace{2in}
+%%%%%%%%%%%% Section Elasticity %%%%%%%%%%%%%%%%
+\section*{Elasticity of Demand}
+
+\hspace{\parindent}A word on notation is often more confusing than the concepts themselves.  In applications, we often try to give names to the variables that are intuitively related to the quantities of interest as opposed to always using $x$ and $y$. 
+
+{Elasticity of Demand} is a measure of how demand reacts to price changes. The calculation of \emph{Elasticity of Demand} requires a demand function which is expressed the demand of a product or service as a function of its price and other factors (e.g. substitutes and complementary goods etc.) 
+
+In example 2 and example 3 from section 2.10 by \cite{Calaway}, the notation $q$ representing the demand quantity is used as the \emph{dependent variable}.  The notation $p$ representing the price is used as the \emph{independent variable}. As such, the demand function is written as $q(p)$.  We would then express the derivative as $q'(p)$ or\footnotemark[1] $\displaystyle\frac{dq}{dp}$.  Of course, the rules for finding derivatives are the same and not dependent on the choice of variables.
+
+The calculation and the interpretation of the \emph{Elasticity of Demand} are explained in great details in section 2.10  from \cite{Calaway}\footnotemark[2].
+
+\footnotetext[1]{The \emph{Leibniz} notation form: $\displaystyle\frac{dp}{dq}$ (read aloud as \emph{"dee que dee pee"}) is used in the \emph{Elasticity of Demand} formula in \cite{Calaway}}
+\footnotetext[2]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+%%%Question 6 from MOM HW 5%%%
+\begin{example}
+See Question 6 (last question) from Homework Assignment 2: Lesson 5.
+
+ %%short answer
+    \begin{sol}
+    0.4091; Inelastic ; Raise Prices
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+\vspace*{\fill}
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+\begin{multicols}{2}
+\input{ans5}
+\end{multicols}
+
+

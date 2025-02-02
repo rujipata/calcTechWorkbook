@@ -1,0 +1,220 @@
+%Dave's handout 6.5 (Future Value) and 9.5 (Present Value)
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Be able to apply the concept and techniques of definite integration to compute and interpret the \emph{future value of an income stream.}
+    \item Be able to apply the concept and techniques of definite integration to compute and interpret the \emph{present value of an income stream.}
+    
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+    \begin{itemize}
+        \item \emph{Section 3.7 Applications to Business}
+        \begin{itemize}
+            \item Continuous Income Stream
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Continuous Income Stream
+    \item Future value of an income stream
+    \item Present value of an income stream
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans25]
+\Opensolutionfile{ansL}[ansL25]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent In lesson \ref{interest}, you reviewed about continuously compound interest that you learned in college algebra. In this simple situation, you initially made a single deposit into an interest-bearing account and let it sit undisturbed, earning interest, for some period of time. 
+
+\begin{tcolorbox}[title = {Recall Compounded Continuously}]
+\begin{equation}\label{eq:compoundInterest}
+    A = Pe^{rt}
+\end{equation}
+
+$A = $ amount after $t$ years
+
+$P=$ principal
+
+$r=$ annual interest rate (expressed as a decimal)
+
+$t=$ number of years\\
+\end{tcolorbox}
+\noindent If you are using the formula in equation \ref{eq:compoundInterest} to find what an account will be worth in the future, $t > 0$ and $A(t)$ is called the \textbf{future value}.\\
+\begin{equation}\label{eq:futureValue}
+    \text{Future Value}=P\cdot e^{rt}
+\end{equation}
+By solving the same equation \ref{eq:compoundInterest} for $P$, you will find what you need to deposit today to have a certain value $P$ sometime in the future and $A(t)$ is called the \textbf{present value}.
+\begin{equation}
+    \text{Present Value}=A\cdot e^{-rt}
+\end{equation}
+The assumption of the calculation of the future value in equation \ref{eq:futureValue} is that there is no future deposits or withdrawals once the initial deposit is made. Since this assumption is quite unrealistic, we will consider a more realistic situation where deposits are "flowing continuously" into an account that earns interest. We will refer to this framework as \textbf{continuous income stream}
+
+%%%%%%%%Add a footnote describing 'flowing' using https://www.math.ubc.ca/~malabika/teaching/ubc/spring11/math105/value.pdf
+
+\begin{tcolorbox}[title = {Continuous Income Stream}]
+Suppose money can earn interest at an annual interest rate of $r$, compounded continuously. Let $K(t)$ be the rate of continuous income function (in dollars per year) that applies between year 0 and year $N$. The \textbf{total income} ($TI$) for the first $N$ years is 
+\begin{equation}
+    TI=\int_0^N K(t)\,dt
+\end{equation}
+\textbf{Practical Definition:} We will refer to a \textbf{continuous income stream} as a sequence of future deposits is made into the account after the initial one and over a long period of time. If the deposits are made regularly enough and the time between deposits is relatively short compared to the overall lifetime of the account, we can think of the money as "flowing" continuously into the account rather than in a large number of discrete chunks\footnotemark[1].
+\end{tcolorbox}
+\footnotetext[1]{Source: \url{https://www.math.ubc.ca/~malabika/teaching/ubc/spring11/math105/value.pdf}}
+\noindent If you want to know the \textbf{current worth} of a continuous income stream over time; this is referred to as the \textbf{present value of a continuous stream of income}.  One formulation of the question is:  What amount (present value) would you be willing to invest now (the present) in return for a continuous income stream (with a rate of $K(t)$ dollars per year) over a certain number of years ($N$) with interest on the income being compounded continuously at a guaranteed rate over the entire time interval?  Another formulation would be:  What amount (present value) would you accept right now in exchange for a continuous income stream over a specified number of years? \\
+
+\noindent Calculus allows us to handle situations where “deposits” are flowing continuously into an account that earns interest. As long as we can model the flow of income with a function, we can use a definite integral to calculate the present and future value of a continuous income stream. The idea is – each little bit of income in the future needs to be multiplied by the exponential function to bring it back to the \textbf{present}, and then we will add them all up (a definite integral).
+\begin{tcolorbox}[title = {Present Value of Income Stream}]
+Suppose money can earn interest at an annual interest rate of $r$, compounded continuously. Let $K(t)$ be the rate of continuous income function (in dollars per year) that applies between year 0 and year $N$. The \textbf{present value of the continuous income stream} is:
+\begin{equation}\label{eq:presentFlow}
+    PV=\int_0^N K(t)e^{-rt}\,dt
+\end{equation}
+\noindent where $t=0$ to $t=N$ is the time interval.
+\end{tcolorbox}
+%%%Dave's handout 9.5 Present Value (Example 2)%%%
+\begin{example}
+A company that is attempting to downsize its workforce is offering an early retirement option that provides \$20,000 per year for the next 10 years. Another option gives an employee a lump sum payment of \$165,000.  Annual interest rates for invested money are assumed to remain at 4.5\% compounded continuously for the 10-year time frame.  
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+    \begin{enumerate}[leftmargin=*]
+    \item If an employee would place the lump sum payment in a savings account for the next 10 years, which option would be most beneficial? \vspace*{\stretch{1.5}}
+    \item Some employees have argued that the constant payment of \$20,000 per year does not take into account inflation over the period.  The company changes the offer and will provide an income stream of $20,000e^{.01t}$ dollars per year.  Would this change the employee’s decision? \vspace*{\stretch{1}}
+    \end{enumerate}
+    %%short answer
+    \begin{sol}
+    \renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+    \begin{enumerate}[leftmargin=*]
+    \item $PV=20,000\left[\displaystyle\frac{1}{-0.045}e^{-0.045t}\right]_0^{10}\approx$\$161,054; take the lump sum payment since you are being offered more than the income stream is currently worth.
+    \item  $PV=20,000\left[\displaystyle\frac{1}{-0.035}e^{-0.035t}\right]_0^{10}\approx$\$168,750. With this adjustment, the income stream is now worth more than the lump sum being offered. So, take the 2nd option
+    \end{enumerate}
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+
+\noindent Now consider the following scenario (hypothetical):  You are depositing money in a retirement account steadily (continuously) throughout the year (this is called a \emph{continuous income stream}) so that in total, $K(t)$ dollars are deposited per year.  Assume the account pays an annual interest rate of $r$ compounded continuously.  The information we would like to have is the amount that will be in the account after $N$ years.  This amount is referred to as the \textbf{future value of an income stream}. Similar to the future value with a single one-time deposit in equation \ref{eq:futureValue}, the \textbf{future value of an income stream} can be calculated by replacing the principle ($P$) in the equation \ref{eq:futureValue} with the equation of the present value ($PV$) (eq.\ref{eq:presentFlow}):
+\begin{displaymath}
+        \begin{split}
+         \text{Equation}\,\ref{eq:futureValue}:\, \text{Future Value}=P\cdot e^{rt}\Longrightarrow   FV&=PV\cdot e^{rN}\\
+            &=e^{rN}\cdot \int_0^N K(t)e^{-rt}\,dt=\int_0^N K(t)e^{-rt}\cdot e^{rN} \,dt\\
+            &=\int_0^N K(t)e^{rN-rt} \,dt\bm{=\int_0^N K(t)e^{r(N-t)} \,dt}\\
+    \end{split}
+\end{displaymath}
+\begin{tcolorbox}[title = {Future Value of Income Stream}]
+Suppose money can earn interest at an annual interest rate of $r$, compounded continuously. Let $K(t)$ be the rate of continuous income function (in dollars per year) that applies between year 0 and year $N$. The \textbf{future value of the continuous income stream} after $N$ years is:
+\begin{equation}
+    FV=\int_0^N K(t)e^{r(N-t)} \,dt
+\end{equation}
+\noindent where $t=0$ to $t=N$ is the time interval.
+\end{tcolorbox}
+%%%Dave's handout 6.5 Application of Definite Integrals (Example 2)%%%
+\begin{example}
+Suppose that at age 50, you decide you want to retire at age 60 (10 years) and you set up a supplemental retirement account.  You plan to deposit money into the account steadily throughout the year, depositing a total of \$24,000 per year.  The account is guaranteed to pay an annual interest rate of 4\% compounded continuously. 
+    \renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+    \begin{enumerate}[leftmargin=*]
+    \item Determine the future value of your account at the end of 10 years.  Compare this value with the actual amount deposited over 10 years. \vspace*{\stretch{1}} \newpage      
+    
+    \noindent \textbf{Look Back:} The difference between the \underline{actual} amount deposited and the future value of the account is due to interest, which is being computed on a continuous basis. If we could deposit the entire \$240,000 now, the $FV$ would be $A(10)=24,000e^{0.04(10)}\approx $ \$358,038 (more interest; why?).
+    
+    \item 	You were hoping that the supplemental account would be worth \$350,000 before your retire.  If you are going to wait until the account reaches a value of \$350000, after how many years will you be able to retire?  (One decimal place) \vspace*{\stretch{1}} \\
+    
+    \noindent \textbf{Look Back:} An additional 11.5-10=1.5 years of work increases the $FV$ by 350,000-295,095=\$54,905 (only (1.5)(24,000)=\$36,000 deposited from the addition 1.5 years of work).
+    
+    \item Suppose you do not want to wait past age 60 to retire.  At what rate per year do you need to contribute to the account in order to have \$350000 after 10 years?\vspace*{\stretch{1}} 
+    \end{enumerate}
+    %%short answer
+    \begin{sol}
+        \renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+    \begin{enumerate}[leftmargin=*]
+    \item $FV=-600,000\left[e^{0.04(10-t)}\right]_0^{10}\approx $\$295,095
+    \item $FV=350,000\Longrightarrow \left[-600,000e^{0.04(N-t)}\right]_0^N=350,000\Longrightarrow N=\displaystyle\frac{\ln\left(\frac{19}{12}\right)}{0.04}\approx$ 11.5 years.
+    \item $FV=350,000\Longrightarrow K(t)\left[\displaystyle\frac{1}{-0.04}e^{0.04(10-t)}\right]_0^{10}=350,000\Longrightarrow K(t)\approx$ \$28,465 per year deopsit.
+    \end{enumerate}
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\noindent \textbf{Look Back:} Similar analysis can  be used to determine the effect on $FV$ if the interest rate is to be modified to achieve and amount at a given number of years in the future for a fixed amount deposited each year.
+\newpage
+
+%%%Dave's handout 9.5 Present Value (Modified Example 1--add a question asking for Future Value and a questions relating Present value to future value)%%%
+\begin{example}
+A small-business owner is projecting that her annual profit stream over the next 5 years will be constant at \$60,000 per year.  Suppose that the annual interest rate for invested money is guaranteed at 4\% compounded continuously for the next 5 years. Answer the following questions:
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+    \begin{enumerate}[leftmargin=*]
+    \item Determine the \textbf{present} value of the income stream. \vspace*{\stretch{1}}
+    \item Suppose that an investor has offered to buy her business for \$300,000 payable immediately.  Based on the \textbf{present} value in part (a),   what should the owner decide to do if her desire is to maximize her value after 5 years? Should she sell the business? Why?\vspace*{\stretch{0.5}}
+    \item Determine the \textbf{future} value of the income stream. \vspace*{\stretch{1}}\newpage
+    \item If she takes \$300,000 and deposit the money in her bank account, how much money would she have in the account in the next 5 year? Comparing this amount to  the \textbf{future} value in part (c), should she sell the business? Why?
+    \end{enumerate}
+    
+\vspace*{\fill}
+\noindent \textbf{Look Back:}
+\renewcommand{\labelenumi}{\textbf{(\arabic{enumi})}}
+\begin{enumerate}[leftmargin=*]
+\item Both the present value and the future value of the income stream suggest that she should sell her business and take \$300,000 now.
+\item If she accept \$271,904 (the amount of the present value) for the income stream now and put it in her bank account, the amount in her account in the next 5 year will be $A(5)=271,904e^{0.04(5)\approx}$ \$332,104 which is equal to the amount of the \textbf{future value} \textbf{!} So the \textbf{present value} is telling us what we should accept now to have the same future value as the income stream guarantees us over the same time frame.
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+    \renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+    \begin{enumerate}[leftmargin=*]
+    \item $PV=60,000\left[\displaystyle\frac{1}{-0.04}e^{-0.04t}\right]_0^{5}\approx$ \$271,904. 
+    \item The owner is being offered more (right now) than the income stream is worth (right now). So, she should see the business and take the \$300,000.
+    \item $FV=60,000\left[\displaystyle\frac{1}{-0.04}e^{0.04(5-t)}\right]_0^{5}\approx $\$332,104.
+    \item $A(5)=300,000e^{0.04(5)}\approx$ \$366,421 which is more than the future value. Therefore, she should sell her business.
+    \end{enumerate}
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%Begin Next 
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+
+%\newpage
+%\vspace*{\fill}
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+
+%\begin{multicols}{2}
+\input{ans25}
+%\end{multicols}
+
+
+

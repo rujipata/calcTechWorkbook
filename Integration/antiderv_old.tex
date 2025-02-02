@@ -1,0 +1,296 @@
+%Dave's handout 6.1 Antidifferentiation
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Understand the concept of an \textbf{antiderivative}.
+    \item Be able to use basic rules of integration (antidifferentiation) for finding antiderivatives (indefinite integrals).
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+   \begin{itemize}
+        \item \emph{Section 3.3 Antiderivatives of Formulas}
+        \begin{itemize}
+            \item \emph{Examples 1-4}
+        \end{itemize}
+    \end{itemize}
+
+\item \cite{openstax}\footnotemark[2]
+    \begin{itemize}
+        \item \emph{Section 4.10 Antiderivatives}\footnotemark[3]
+        
+    \end{itemize}
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+%\begin{multicols}{2}
+\begin{itemize}
+    \item Antiderivative
+    \item Indefinite integrals
+    \item Integrand
+    \item Rules for integration/antidifferentiation
+    \item Initial Value
+\end{itemize}
+%\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+\footnotetext[2]{Available free to download from \url{https://openstax.org/details/books/calculus-volume-1} .}
+\footnotetext[3]{Disregard any examples with trigonometry.}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans20]
+\Opensolutionfile{ansL}[ansL20]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent We have spent a lot of time discussing the derivatives of various types of functions, derivatives that were determined by a process called differentiation.  We now consider the following question:  If we know that a function $f(x)$ is a \textbf{derivative} of a function $F(x)$, that is   $F'(x)=f(x)$, how can we determine $F(x)$ [we will call $F(x)$ an \textbf{antiderivative} of $f(x)$.] ?  \\
+
+\noindent A simple example would be $f(x)=2x$.  In this case, we can see that $F(x)=x^2$ would be an antiderivative of $f(x)$, because clearly $F'(x)=2x$.  But we also note that $F(x)=x^2+4$ would be an antiderivative of $f(x)$. The collection of all functions of the form $x^2+C$, where $C$ is any real number, is known as the \textbf{family of antiderivatives} of $2x$.  \\
+
+\noindent From this observation, we can conclude that $f(x)$ does not have a single antiderivative, but all antiderivatives of $f(x)$ will have the form $F(x)+C$, where $C$ is a constant.  The process of determining antiderivatives is referred to as \textbf{antidifferentiation}.  For cases in which $f(x)$ is a more complicated function, we will make use of rules for finding antiderivatives just as we used rules for finding derivatives.
+
+\begin{tcolorbox}[title = {Antiderivatives}]
+
+\noindent \textbf{An antiderivative} of a function $f(x)$ is any function $F(x)$ where $F'(x)=f(x)$.\\
+
+\textbf{The antiderivative} of a function $f(x)$ is a whole \textbf{family} of functions written 
+$$F(x)+C$$ 
+where $F'(x)=f(x)$ and $C$ respresents any constant. The antiderivative is also called the \textbf{indefinite integral}.\\
+
+\textbf{Verb forms:} We \textbf{antidifferentiate, or integrate}, or \textbf{find the indefinite integral} of a function. This process is called \textbf{antidifferentiation} or \textbf{integration}.
+\end{tcolorbox}
+
+\begin{tcolorbox}[title = {Notation for the antiderivative:}]
+The antiderivative of $f$ is written
+$$\int f(x) dx$$
+The $\int$ symbol is still called an \textbf{integral sign}; the $dx$ on the end still must be included; you can still think of $\int$ and $dx$ as left and right parentheses. The $dx$ tells us that the function of interest is a function of the \emph{independent} variable $x$. The function $f$ is still called the \textbf{integrand}.
+\end{tcolorbox}
+
+%%%Examples%%%
+\begin{example}
+Find \textbf{an} antiderivative of $x$.
+    %%short answer
+    \begin{sol}
+    You can choose any function you like as long as its derivative is $x$, so you can pick ; for example, $F(x)=\displaystyle\frac{x^2}{2}-5$, $F(x)=\displaystyle\frac{x^2}{2}+2.3, etc.$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Find \textbf{the} antiderivative of $x$. 
+    %%short answer
+    \begin{sol}
+    Now you need to write the entire family of functions whose derivatives are $x$. You can use the notation: $\displaystyle\int x \  dx=\displaystyle\frac{x^2}{2}+C$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Each of the following statements is of the form $\displaystyle\int f(x) dx=F(x)+C$. Verify that each statement is correct by showing that $F'(x)=f(x)$
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+    \item $\displaystyle\int (x+e^x) dx=\frac{x^2}{2}+e^x+C$. \vspace*{\stretch{1}} \newpage
+    \item $\displaystyle\int (xe^x) dx=xe^x-e^x+C$. \vspace{0.5in}
+\end{enumerate}
+
+%%short answer
+    \begin{sol}
+    \onehalfspacing{
+    \begin{enumInline1}
+    \item $\displaystyle\frac{d}{dx}\left(\frac{x^2}{2}+e^x+C\right)=x+e^x$
+    \item $\displaystyle\frac{d}{dx}\left(xe^x-e^x+C\right)=xe^x$
+    \end{enumInline1} }
+    
+    \end{sol}
+%%complete solution
+    \begin{solL}
+    ??
+    \end{solL}
+
+    
+\end{example}
+
+\noindent Antidifferentiation is going backwards through the derivative process. So the easiest antiderivative rules are simply backwards versions of the easiest derivative rules. The corresponding rules for antiderivatives are listed in the table below – each of the antiderivative rules is simply rewriting the derivative rule. All of these antiderivatives can be verified by differentiating.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent In what follows, $f(x)$ and $g(x)$ are differentiable functions of $x, k, n$ and $C$ is a constant.
+\vspace{-0.4cm}
+\begin{center}
+\begin{tabular}{ | m{4cm} | m{5cm}| m{6cm} | } 
+\hline
+ & Derivative Rules & Indefinite Integral \\ 
+\hline
+
+Power Rule & $$\frac{d}{dx}(x^n)=nx^{n-1}$$ & $$\int x^n dx=\frac{x^{n+1}}{n+1}+C \ ; \ n\ne -1$$ \\ 
+
+\hline
+
+Constant Rule & $$\frac{d}{dx}(k)=0$$ & $$\int k dx=\int kx^{0} dx=kx+C$$  \\ 
+
+\hline
+
+Exponential Rule & $$\frac{d}{dx}(e^{kx})=ke^{kx}$$ & $$\int e^{kx} dx=\frac{1}{k}e^{kx}+C$$  \\ 
+
+\hline
+Natural Logarithmic Rule & $$\frac{d}{dx}(\ln x)=\frac{1}{x}$$ & $$\int \frac{1}{x} dx=\ln|x|+C \ ;\ x\ne 0 $$  \\ 
+
+\hline
+
+Constant Multiple Rule & $\displaystyle\frac{d}{dx}(kf(x))=kf'(x)$ & $$\int kf(x) dx=k\int f(x) dx+C$$ \\ 
+
+\hline
+Sum (or Difference) Rule & $$\frac{d}{dx}(f(x)\pm g(x))=f'(x)\pm g'(x)$$ & $$\int f(x)\pm g(x) dx$$ \\ 
+ & & $$=\int f(x) dx \pm \int g(x) dx+C$$\\
+ \hline
+\end{tabular}
+\end{center}
+\noindent \textbf{Note:} For the \emph{Natural Logarithmic Rule}, the antiderivative of $\displaystyle\frac{1}{x}$ is actually NOT simply $\ln(x)$, is is $\ln|x|$. Why? The domain of $\displaystyle\frac{1}{x}$ is $(-\infty,0)\cup (0,\infty)$ which is bigger than the domain of $\ln(x)$ which is $(0,\infty)$. To match the domain of the antiderivative of $\displaystyle\frac{1}{x}$ with the domain of $\displaystyle\frac{1}{x}$, you must careful to include those absolute values so that you do not have to worry about whether our $x$'s are positive or negative. Otherwise, you could end up with domain problems.\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int (-3) dx$. 
+    %%short answer
+    \begin{sol}
+     $F(x)=-3x+C$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(\frac{1}{x^3}\right) dx$. 
+    %%short answer
+    \begin{sol}
+     $F(x)=-\displaystyle\frac{1}{2x^2}+C$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(e^{-4x}\right) dx$. 
+    %%short answer
+    \begin{sol}
+     $F(x)=-\displaystyle\frac{1}{4}e^{-4x}+C$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(\sqrt{x}+e^{2x}\right) dx$. 
+    %%short answer
+    \begin{sol}
+     $F(x)=\displaystyle\frac{2}{3}x^{3/2}+\frac{1}{2}e^{2x}+C$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(\frac{2}{x}-3e^{\frac{1}{2}x}+5\right) dx$. 
+    %%short answer
+    \begin{sol}
+     $F(x)=2\ln|x|-6e^{\frac{1}{2}x}+5x+C$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Determine the function $P(t)$ given the following: $P'(t)=2t-e^{-2t}$ and $P(0)=2$ (this is referred to as the \textbf{initial value} of the function.)
+    %%short answer
+    \begin{sol}
+     $P(t)=t^2+\displaystyle\frac{1}{2}e^{-2t}+\displaystyle\frac{3}{2}$ 
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+A manufacturer of powdered dishwasher soap estimates that the \textbf{marginal cost} at a production level of $x$ tons of soap each day is given by $\bm{C' (x)=0.25x+120}$ dollars per ton.  The fixed costs of production (when no soap is produced; $x=0$) are \$750 each day.  Determine the total daily cost function, $C(x)$, which provides the total cost of producing $x$ tons of soap each day.
+    %%short answer
+    \begin{sol}
+     $C(x)=0.125x^2+120x+750$ dollars
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%Begin Next Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+%\begin{multicols}{2}
+\input{ans20}
+%\end{multicols}
+
+

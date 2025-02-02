@@ -1,0 +1,185 @@
+%Dave's handout 9.1 Integration by Substitution
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Be able to use the method of substitution to determine antiderivatives for complicated functions.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+   \begin{itemize}
+        \item \emph{Section 3.4 Substitution}
+    \end{itemize}
+
+\item \cite{openstax}\footnotemark[2]\textsuperscript{,}\footnotemark[3]
+    \begin{itemize}
+        \item \emph{Section 5.5 Substitution}
+    \end{itemize}
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item u-substitution 
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+\footnotetext[2]{Available free to download from \url{https://openstax.org/details/books/calculus-volume-1} .}
+\footnotetext[3]{Disregard any examples with trigonometry.}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans23]
+\Opensolutionfile{ansL}[ansL23]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent While the rules presented in section \ref{IntgSub} are helping in determining antiderivatives of functions, we are limited in the types of functions which we can apply these rules.  For example, consider the following: $\displaystyle\int \left[(x^2-2)^4\cdot 2x\right] dx$. Unless we expand the integrand (unappealing), the rules from section \ref{IntgSub} will not provide a means to evaluate this integral.  We solve this problem by introducing another technique of integration which will allow us, through a substitution to transform the integrand into a form for which the rules from section \ref{IntgSub} will apply.  This technique is often referred to as “\textbf{u-substitution}”.   The method is one way of algebraically manipulating an integrand so that the rules apply. Specifically, this method helps us find antiderivatives when the integrand is the result of a \temph{chain-rule} derivative.\\
+
+\noindent At first, the approach to the substitution procedure may not appear very obvious. However, it is primarily a visual task—--that is, the integrand shows you what to do; it is a matter of recognizing the form of the function. So, what are we supposed to see? We are looking for an integrand of the form $f[g(x)]g'(x)$. \\
+
+\noindent For example, in the integral $\displaystyle\int \left[(x^2-2)^4\cdot 2x\right] dx$, we have $f(x)=x^4$, $g(x)=x^2-2$, and $g'(x)=2x$. Then, $f[g(x)]g'(x)=(x^2-2)^4\cdot 2x$. With substituition, we will substitute $u=g(x)$. This means $\displaystyle\frac{du}{dx}=g'(x)$, so $du=g'(x) dx$. Making this substitutions, $\displaystyle\int \left[(x^2-2)^4\cdot 2x\right] dx=\displaystyle\int u^4 du$, or $\displaystyle\int f[g(x)]g'(x) dx=\int f(u) du$.
+\vspace{0.5cm}
+\begin{tcolorbox}[title = {Theorem: Substitution with Indefinite Integrals}{\hypersetup{linkcolor=white}\footnotemark}]
+
+\noindent Let $u=g(x)$, where $g'(x)$ is continuous over an interval, let $f(x)$ be continuous over the corresponding range of $g$, and let $F(x)$ be an antiderivative of $f(x)$. Then, 
+\begin{equation}
+\begin{split}
+    \int f[g(x)]g'(x) dx&=\int f(u) du\\
+    &=F(u)+C\\
+    &=F(g(x))+C.
+\end{split}
+\end{equation}
+
+\end{tcolorbox}
+\vspace{0.5cm}
+%%%%%%%%%%%%%Footnotes from Formula Box%%%%%%%%%%%%%%%%%%%%%%
+\footnotetext{\cite{openstax}}
+%%%%%%%%%%%%%Footnotes from Formula Box%%%%%%%%%%%%%%%%%%%%%%
+\begin{tcolorbox}[title={Problem-Solving Strategy: Integration by Substitution}]
+\begin{enumerate}[leftmargin=*]
+    \item Look carefully at the integrand and select an expression $g(x)$ within the integrand to set equal to $u$. Let's select $g(x)$ such that $g'(x)$ is also part of the integrand.
+    \item Substitute $u=g(x)$ and $du=g'(x) dx$ into the integral.
+    \item We should now be able to evaluate the integral with respect to $u$. If the integral can't be evaluated we need to go back and select a different expression to use as $u$.
+    \item Evaluate the integral in terms of $u$. If you still cannot evaluate it, go back to step 1 and try a different choice of $u$.
+    \item Substitute back $x$'s for $u$'s everywhere in your answer.
+\end{enumerate}
+\end{tcolorbox}
+\newpage
+%%%%%%%%%%%%%%%%%%Example: Dave's handout 9.1%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left[(x^2-2)^4\cdot 2x\right] dx$.
+    %%short answer
+    \begin{sol}
+    $F(x)=\displaystyle\frac{1}{5}(x^2-2)^5+C$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1.25}}
+%%%%%%%%%%%%%%%%%%Example: Dave's handout 9.1%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(3x^2\cdot e^{x^3+2}\right) dx$.
+    %%short answer
+    \begin{sol}
+    $F(x)=e^{x^3+2}+C$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1.25}}
+%%%%%%%%%%%%%%%%%%Example: Dave's handout 9.1%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(\frac{e^x}{2+3e^x}\right) dx$.
+    %%short answer
+    \begin{sol}
+    $F(x)=\displaystyle\frac{1}{3}\ln(2+3e^x)+C$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1.25}}
+
+%%%%%%%%%%%%%%%%%%Example: Dave's handout 9.1%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(8x\sqrt{2x^2+4}\right) dx$.
+    %%short answer
+    \begin{sol}
+    $F(x)=\dfrac{(2x^4+7)^8}{8}	+C$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+\newpage
+%%%%%%%%%%%%%%%%%%Example: Dave's handout 9.1%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(\frac{\ln(4x)}{x}\right) dx$.
+    %%short answer
+    \begin{sol}
+    $F(x)=\displaystyle\frac{1}{2}[\ln(4x)]^2+C$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1.5}}
+
+%%%%%%%%%%%%%%%%%%Example: Dave's handout 9.1%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Evaluate $\displaystyle\int \left(\frac{x}{(x^2+3)^2}\right) dx$.
+    %%short answer
+    \begin{sol}
+    $F(x)=-\displaystyle\frac{1}{2(x^2+3)}+C$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+%\begin{multicols}{2}
+\input{ans23}
+%\end{multicols}
+
+

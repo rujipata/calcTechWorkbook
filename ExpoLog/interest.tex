@@ -1,0 +1,144 @@
+%Dave's handout 5.2 Continuously Compounded Interest
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Understand the use of exponential growth functions when interest is compounded continuously.
+    \item Understand how the amount of money in an grows when interest is compounded continuously.
+    \item Understand the concept of \textbf{present value} and how it is used in analysis and decision-making.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{openstaxColAlgebra}\footnotemark[1]
+    \begin{itemize}
+        \item \emph{Section 6.1 Exponential Functions}
+        \begin{itemize}
+            \item Use compound interest formulas.
+            \item Evaluate exponential functions with base $e$.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+%\begin{multicols}{2}
+\begin{itemize}
+    \item Compounding of interest
+    \item Present value
+\end{itemize}
+%\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans18]
+\Opensolutionfile{ansL}[ansL18]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent  Consider accounts where money is placed by an investor/bank customer.  Typically, interest on an account is compounded periodically over the course of a year.  For example, the compounding may be done annually (once per year), quarterly (4 times per year), monthly (12 times per year), etc.  In some cases, the compounding of interest occurs continuously over time (or we may assume this type of compounding).  In this case, the amount of money, $A$, at time t is given by the model $A(t)=Pe^{rt}$, where $P$ is the initial amount invested, and $r$ is the annual interest rate.   \\ 
+
+\begin{tcolorbox}[title = {Continuous Compound Interest Formula}]
+
+$$A = Pe^{rt}$$
+
+$A = $ amount after $t$ years
+
+$P=$ principal
+
+$r=$ annual interest rate (expressed as a decimal)
+
+$t=$ number of years
+
+$e \approx 2.718281828459045.....$
+
+\end{tcolorbox}
+\noindent From lesson \ref{growthDecay}, recall that the \textbf{exponential growth} model which is given by $f(t)=Ce^{kt}$ has the interesting property that $f'(t)=k\cdot f(t)$ which tells us that the rate at which these functions are changing at any point in time is proportional to the size of the function at that time. The application of \textbf{continuously compound interest} also fits this form. Specifically, $A' (t)=r\cdot A(t)$; that is, money grows at a rate proportional to the size of the account. 
+
+%%%Examples%%%
+\begin{example}
+A person has purchased a house as an investment for \$100,000.  Six years later, a developer offers to buy the house for \$205,000.  At what rate of annual interest compounded continuously did this investment earn over this time period? \vspace*{\stretch{1}} 
+
+    %%short answer
+    \begin{sol}
+    $r\approx 0.1196$ or 11.96\%
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\newpage
+%\vspace{0.6in}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Mary invests \$60,000 in an account that pays 5.5\% annual interest compounded continuously.
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate}[leftmargin=*]
+\item At what time will the amount in her account be increasing at a rate of \$4000 per year?\vspace*{\stretch{1.5}} 
+\item Tom invests \$70,000 in an account that pays 5\% annual interest compounded continuously.  Which account is growing at a faster rate at time $t=5$ years?  At time $t=8$ years?\vspace*{\stretch{1}} 
+%\item At what point in time are the amounts in the two accounts increasing at the SAME RATE?\vspace*{\stretch{1}} 
+\end{enumerate}
+    %%short answer
+    \begin{sol}
+   \onehalfspacing{
+    \begin{enumInline1}
+    \item $t\approx 3.50$ years
+    \item At time $t=5$ years
+    %\item $t\approx 11.77$ years
+    \end{enumInline1} }
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%Begin Next Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{2in}
+\begin{comment}
+\subsection*{Present Value}
+Consider the equation $A=Pe^{rt}$ and solve for $P$:  $A=Pe^{-rt}$.  We can use this equation as follows:  You are to receive an amount of money, $A$, at some point in time $t$ years in the future.  Assume that throughout this time period, money can be invested at an annual interest rate, $r$, compounded continuously.  As an option, what amount would you accept (and invest) now in order to have the amount $A$ after $t$ years?  This amount, $P$, is referred to as “the present value of the amount $A$ to be received in $t$ years”.
+%%%Examples%%%
+\begin{example}
+You have won a contest and 2 options are provided for your award:  (1) You will receive \$25,000 4 years from now, or (2) You will receive \$20,000 now.  A bank will guarantee an annual interest rate of 3.5\% compounded continuously over the next 4 years.  Which option should you choose in order to have the most money after 4 years?  \vspace*{\stretch{1}}  
+    %%short answer
+    \begin{sol}
+    Present value is $P\approx $ \$21734; choose 1st option.  You would need \$21734 now to have \$25000 in 4 years at 3.5\% annual rate.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\end{comment}
+
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+%\begin{multicols}{2}
+\input{ans18}
+%\end{multicols}
+
+

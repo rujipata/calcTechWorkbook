@@ -1,0 +1,287 @@
+
+\documentclass[11pt,a4paper,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper, left=28mm,right=28mm,top=20mm]{geometry}
+\usepackage{setspace}
+\usepackage[fleqn]{amsmath,bm}%[fleqn] for using flalign* environment (make equation flush left);see 'differentiability' lesson
+
+\usepackage[normalem]{ulem} %strikeout text using black strikeout line. The option [normalem] prevents \emph to turn to underline. The command is \sout{}
+\newcommand{\msout}[1]{\text{\sout{\ensuremath{#1}}}} % strikeout math mode uses the command,for example, $\msout{\mathsf{stuckout}}$. Requiring amsmath package and ulem package.
+\newcommand\redout{\bgroup\markoverwith {\textcolor{red}{\rule[.5ex]{2pt}{0.8pt}}}\ULon}%change the color and the thickness of a strikethrough. Use the command \redout{} instead of \sout{} to use the strikeout line in red. Note:\rule[raise]{width}{thickness}, so change the number in the third argument in \rule.
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots, pgfplotstable}
+%\usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+%\usepackage{float}
+\graphicspath{ {./images/} }
+\usepackage[dvipsnames]{xcolor} %see details from https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX
+\usepackage{hyperref}%clickable url
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+}
+\usepackage{xurl}%break url in multiple lines
+
+
+ 
+\usepackage[inline]{enumitem} 
+\usepackage{kantlipsum}%set no indent when using enumerate
+
+\newenvironment{enumInline1}{
+\renewcommand{\labelenumi}{\textbf{(\alph{enumi})}}
+\begin{enumerate*}[itemjoin={{\quad}}]
+}
+  %\setlength{\itemsep}{1pt}
+  %\setlength{\parskip}{1pt}
+  %\setlength{\parsep}{1pt}
+{\end{enumerate*}}
+
+\usepackage{import}
+\usepackage{multicol}
+%\setlength{\columnsep}{1}
+\usepackage{vwcol}
+\usepackage{tasks}
+\usepackage{comment}
+\usepackage{answers}
+\Newassociation{sol}{Solution}{ans}
+\Newassociation{solL}{Solution}{ansL}
+\usepackage{amsthm}%required to have normal font (rather than italic) in examples
+\theoremstyle{definition}%required to have normal font (rather than italic) in examples
+\newtheorem{example}{Example}[chapter]
+\begin{comment}
+\newcounter{example}[section]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip\noindent \textbf{Example~\theexample #1} \rmfamily}{\medskip}
+\end{comment}
+%Tables: 
+\usepackage{array}
+\setlength{\arrayrulewidth}{0.5mm}%set the thickness of the borders 
+%\setlength{\tabcolsep}{3pt} %set space between text and right/left border
+%\renewcommand{\arraystretch}{1.5}
+\usepackage{subcaption} % required for 'subtable' environment and 'subfigure' environment
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{ragged2e}%Make each line of the caption will be moved to the left margin, too.  Butthis time the command \RaggedRight
+\captionsetup{
+  font=footnotesize,
+}
+
+
+\usepackage{floatrow}
+\usepackage{makecell}
+\usepackage{booktabs}
+
+%Figure
+\usepackage[export]{adjustbox} %change the default alignment of a image from left or right
+
+%change the word 'Chapter'
+\usepackage{fancyhdr}
+\renewcommand{\chaptername}{Lesson}
+
+%customize chapter
+
+\usepackage{titlesec}
+
+\titlespacing{\chapter}{*-3}{0pt}{0pt}
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Lesson No. \ \thechapter} % label {Lesson No. \ \thechapter}
+{-0.5ex} % sep: horizontal separation between label and title body
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1.5ex}
+    \centering
+} % before-code: code preceding the title body
+
+%set headers (requiring [pagestyles] with 'titlesec' package OR usepackage{titleps}
+\newpagestyle{main}{
+  \sethead[\thepage][\chaptertitle][(\thesection] % even
+          {\emph{LESSON NO.} \emph{\thechapter}}{\sectiontitle}{\thepage}} % odd
+\pagestyle{main}
+%To set footers, use \setfoot instead of \sethead
+
+\begin{comment}
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+\end{comment}
+
+%Ruler
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+%Box
+\usepackage{fancybox,framed}
+\usepackage[many]{tcolorbox}
+
+
+%Biography
+\usepackage[
+backend=biber,
+style=numeric,
+citestyle=authortitle
+]{biblatex}
+
+\usepackage{cancel}
+\newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
+
+\addbibresource{math1100workbook.bib} %Imports bibliography file
+
+\begin{document}
+
+\frontmatter
+\import{./}{title.tex}
+
+\clearpage
+\thispagestyle{empty}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+%\newpage
+%\vspace{.25in}
+
+\mainmatter
+%%%%%%%%%%%%%%First Part%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{\emph{Derivatives}}
+\newpage
+
+\chapter{Limits }\label{limits}
+\import{derivatives/}{limits.tex}
+\vspace{-0.3in}
+%\section*{{Exercises \ref{limits}}}
+%\import{Exercises/}{exercises_limits.tex}
+
+\chapter{Derivatives of Functions}\label{introDerv}
+\import{derivatives/}{derivatives-functions.tex}
+
+\chapter{Differentiability and Continuity}\label{differentiability}
+\import{derivatives/}{Differentiability.tex}
+
+\chapter{Basic Rules of Differentiation and Marginal Analysis}\label{diffRules}
+\import{derivatives/}{differentiationRules.tex}
+
+\chapter{Chain Rule and General Power Rule}\label{GenPower}
+\import{derivatives/}{GeneralPowerRule.tex}
+
+\chapter{Related Rates}\label{RelatedRates}
+\import{derivatives/}{RelatedRates.tex}
+
+\chapter{First Derivative Test For Local Extreme Values}\label{FirstDerv}
+\import{derivatives/}{FirstDerivativeTest.tex}
+
+\chapter{Global Extreme Values}\label{GlobalExtreme}
+\import{derivatives/}{GlobalExtremeValues.tex}
+
+\chapter{Second Derivative and Concavity}\label{concavity}
+\import{derivatives/}{2ndDervConcavity.tex}
+
+%\chapter{Derivatives and the Shape of a Graph}\label{shape}
+%\import{derivatives/}{shapeOfGraph.tex}
+
+%\chapter{Optimization}\label{optimization}
+%\import{derivatives/}{optimization.tex}
+
+\chapter{Applied Optimization}\label{appliedOptimization}
+\import{derivatives/}{appliedOptimization.tex}
+
+%\chapter{Curve Sketching}\label{curveSketch}
+%\import{derivatives/}{curveSketch.tex}
+
+\chapter{Product and Quotient Rules}\label{productQuotient}
+\import{derivatives/}{productQuotient.tex}
+
+\chapter{Implicit Differentiation}\label{implicitDiff}
+\import{derivatives/}{implicitDiff.tex}
+
+%%%%%%%%%%%%%%Second Part%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{\emph{Derivatives of Exponential and Logarithmic Functions}}
+
+\chapter{Derivatives of Natural Exponential Functions}\label{expoFun}
+\import{ExpoLog/}{expoFun.tex}
+
+\chapter{Derivatives of Natural Logarithm Functions}\label{DervNLog}
+\import{ExpoLog/}{DervNLog.tex}
+
+\chapter{Natural Logarithm Functions: Properties and Differentiation}\label{NLogPropDerv}
+\import{ExpoLog/}{NLogPropDerv.tex}
+
+\chapter{Exponential Growth and Decay Models}\label{growthDecay}
+\import{ExpoLog/}{growthDecay.tex}
+
+\chapter{Continuously Compounded Interest}\label{interest}
+\import{ExpoLog/}{interest.tex}
+
+\chapter{Applications of Natural Log Functions}\label{appNlog}
+\import{ExpoLog/}{appNlog.tex}
+
+\chapter{Functions of Two Variables and Partial Derivatives}\label{PartialDerivatives}
+\import{Two Variables/}{PartialDerivatives2.tex}
+
+
+
+%\chapter{Exponential Models}\label{expModel}
+%\import{ExpoLog/}{expModel.tex}
+
+%%%%%%%%%%%%%%Third Part%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{\emph{Integration}}
+
+\chapter{Antidifferentiation}\label{antiderv}
+\import{Integration/}{antiderv.tex}
+
+\chapter{Definite Integrals and Net Change of a Function}\label{defIntg}
+\import{Integration/}{defIntg.tex}
+
+\chapter{Definite Integrals and Area}\label{defIntgArea}
+\import{Integration/}{defIntgArea1.tex}
+
+\chapter{Integration by Substitution}\label{IntgSub}
+\import{Integration/}{IntgSub.tex}
+
+\chapter{Future Value and Present Value}\label{presentValue}
+\import{Integration/}{presentValue.tex}
+
+%\chapter{Average Value of A Function}\label{defIntgApp}
+%\import{Integration/}{defIntgApp.tex}
+
+%\chapter{Improper Integrals}\label{improper}
+%\import{Integration/}{improperIntg.tex}
+
+%\chapter{Derivatives as Rates of Change}\label{rateChange}
+%\import{derivatives/}{rate-of-change.tex}
+
+%\chapter{Natural Logarithm Functions}\label{naturalLog}
+%\import{ExpoLog/}{naturalLog.tex}
+
+%\chapter{Improper Integrals}\label{improperIntg}
+%\import{Integration/}{improperIntg.tex}
+
+%\part{Example Instructions and Study Help}
+%\chapter{Exam 2 Study Help and Instructions}\label{Exam2studyHelp} 
+%\import{Exam Instructions/}{Exam2StudyHelpInstructions.tex}
+
+
+\part{Example Solutions}
+\import{solutions/}{Example_Solutions.tex}
+
+%\part*{Additional Resources for Homework Assignments}
+%\import{Resources/}{HomeworkResources1.tex}
+%\newpage
+%\import{Resources/}{HomeworkResources2.tex}
+%\newpage
+%\import{Resources/}{HomeworkResources3.tex}
+
+%\part*{Teaching Resources}
+%\import{Resources/}{teaching_resources.tex}
+
+\printbibliography
+\end{document}
+

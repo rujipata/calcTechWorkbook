@@ -1,0 +1,221 @@
+%Dave's handout 1.7 intro 2nd derivatives
+%Dave's handout 2.2 2nd derivative rule
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Understand how and when to use the \textbf{inverse properties} for natural exponential and natural log functions.
+    \item Be able to \textbf{simplify expressions} involving natural exponential and natural log functions.
+    \item Be able to \textbf{solve equations} involving natural exponential and natural log functions.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{Calaway}\footnotemark[1]
+   \begin{itemize}
+        \item \emph{Section 1.8 Logarithmic Functions}
+    \end{itemize}
+
+\item \cite{openstaxColAlgebra}\footnotemark[2]
+    \begin{itemize}
+        \item \emph{Section 6.3 Logarithmic Functions}
+       \begin{itemize}
+           \item Using Natural Logarithms
+       \end{itemize}
+       \item \emph{Section 6.6 Exponential and Logarithmic Equations}
+       \begin{itemize}
+           \item Solving Exponential Equations Using Logarithms
+       \end{itemize}
+    \end{itemize}
+
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Natural log functions (base $e$)
+    \item Inverse Properties
+    \item Solving exponential and log equations.
+\end{itemize}
+\end{multicols}
+\end{framed}
+\footnotetext[1]{Available free to download from \url{http://www.opentextbookstore.com/details.php?id=14} .}
+\footnotetext[2]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans15]
+\Opensolutionfile{ansL}[ansL15]
+%%%%%%%%%%%%%%%%Start First Topic%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The most frequently used base for logarithms is $e$. Base $e$ logarithms are important in calculus and some scientific applications; they are called \textbf{natural logarithms}. 
+
+\noindent This lesson provides a brief review of the natural $log$ function $f(x)=ln(x)$ and  its two important inverse properties. We use these properties often when solving equations involving exponential and $log$ terms.
+\begin{tcolorbox}[title = {Definition of The Natural Logarithms}]
+The logarithm with \textbf{base \textit{e}} is called the \textbf{\textit{natural} logarithm} and is denoted by $\ln (x)$.\\ That is,
+
+$$\ln(x) = \log_e (x)$$ 
+Thus, 
+$$ y= \ln(x)\quad \text{if and only if}\quad  x = e^y$$
+
+$e \approx 2.718281828459045...$
+\end{tcolorbox}
+%%%%%%%%%%%%%%Dave's handout 4.4. Natural Logarithm Functions%%%%%%%%%%%
+\noindent Recall that the natural log function $f(x)=ln(x)$  is the inverse of the exponential function $g(x)=e^x$.  As such, we have two important inverse properties:    
+
+\begin{tcolorbox}[title = {Inverse Properties of Logarithms}]
+
+Since the functions $y=e^x$ and $y=ln(x)$ are inverse functions,
+\begin{equation}\label{eq:inverseLog1}
+    ln(e^x)=x \quad \text{for all}\quad x
+\end{equation}
+and
+\begin{equation}\label{eq:inverseLog2}
+    e^{ln(x)}=x \quad \text{for}\quad x>0
+\end{equation}
+
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%Openstax College Algebra 6.3 Logarithmic Functions%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent Most values of $ln(x)$ can be found only using a calculator. The major exception is that, because the logarithm of 1 is always 0 in any base, $ln(1)=0$. For other natural logarithms, we can use the $ln$ key that can be found on most scientific calculators.  We can also find the natural logarithm of any power of $e$ using the inverse property of logarithms in equation \ref{eq:inverseLog1}. 
+In addition, we use these properties often when solving equations involving exponential and log terms.\\%Dave's handout 4.4. Natural Logarithm Functions%
+%%%%%%%%%%%%Dave's handout 4.4. Natural Logarithm Functions%%%%%%%%%
+%%%Examples%%%
+\begin{example}
+Simplify the expression, making use of laws of exponents: $e^{4ln(x)}$
+    %%short answer
+    \begin{sol}
+    $x^4$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Simplify the expression, making use of laws of exponents: $e^{ln(x)-ln(3)}$
+    %%short answer
+    \begin{sol}
+    $\displaystyle\frac{x}{3}$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln(x^2)=10$
+    %%short answer
+    \begin{sol}
+    $x=\pm \sqrt{e^{10}}$ or $x=\pm e^5$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $4ln(3x)=9$
+    %%short answer
+    \begin{sol}
+    $x=\displaystyle\frac{1}{3}e^{9/4}$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln\left(\displaystyle\frac{3}{x}\right)=2$
+    %%short answer
+    \begin{sol}
+    $x=\displaystyle\frac{3}{e^2}$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $2ln(x+1)=5$
+    %%short answer
+    \begin{sol}
+    $x=e^{5/2}-1$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Given $f(x)=2x-4e^x$, find the coordinates of any relative maximum or relative minimum points. 
+    %%short answer
+    \begin{sol}
+    $(ln(0.5),2ln(0.5)-2)$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{2}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Find the point on the graph of the function $f(x)=e^{2x}$ where the slope of graph is equal to 4.
+    %%short answer
+    \begin{sol}
+    $\left(\displaystyle\frac{ln(2)}{2},2\right)$.
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+\begin{multicols}{2}
+\input{ans15}
+\end{multicols}
+
+

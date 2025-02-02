@@ -1,0 +1,279 @@
+%Dave's handout 4.6 Natural Logarithm Functions: Properties and Differentiation 
+
+\vspace{-0.25 in}
+\begin{framed}
+\subsection*{Objectives}
+\begin{itemize}
+    \item Be familiar with the properties of log functions and how to use them in solving equations.
+    \item Be able to use log properties in differentiating complicated functions that involve log functions.
+\end{itemize}
+
+%%%Reading Assignment%%%
+\subsection*{Suggested Reading:}
+\begin{itemize}
+\item \cite{openstaxColAlgebra}\footnotemark[1]
+    \begin{itemize}
+        \item \emph{Section 6.3 Logarithmic Functions}
+        \item \emph{Section 6.5 Logarithmic Properties}
+    \end{itemize}
+   
+\end{itemize}
+%\subsection*{Supplemental Materials:}
+%%%Key Terms%%%
+\subsection*{Key Terms and Concepts:} 
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Natural log functions (base $e$)
+    \item Properties of log functions.
+    \item Differentiation using log properties.
+\end{itemize}
+\end{multicols}
+\end{framed}
+
+\footnotetext[1]{Available free to download from \url{https://openstax.org/details/books/college-algebra} .}
+
+\newpage
+%%%%%%%%%%START LESSON CONTENT%%%%%%%%%%%%%
+%\noindent\makebox[\linewidth]{\rule{\textwidth}{0.8pt}}
+\Opensolutionfile{ans}[ans16]
+\Opensolutionfile{ansL}[ansL16]
+%%%%%%%%%%%%%%%%Log Properties from Pata's College Algebra handout%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+\noindent For any base $a>0$, with $a \neq 1$,
+\begin{equation}
+\log_a(a) = 1
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\log_a(1) = 0
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\log_a(a^x) =x \quad \text{for any real number} x
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+a^{\log_a(x)}=x \quad \text{for any} \quad x>0
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\text{Product Rule: } \log_a(M \cdot N)=log_a(M) +log_a(N)
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\text{Quotient Rule: } \log\left(\frac{M}{N}\right)=\log_a(M) - \log_a(N) 
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\text{Power Rule: } \log_a(M^r) = r \cdot \log_a(M)
+\end{equation}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The following logarithmic properties are useful in solving equations:
+\begin{tcolorbox}[title = {Review: Logarithmic Properties }]
+
+\begin{equation}
+\ln(e) = 1
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\ln(1) = 0
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\ln(e^x) =x \quad \text{for any real number} x
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+e^{\ln(x)}=x \quad \text{for any} \quad x>0
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\text{Product Rule: } \ln(M \cdot N)=ln(M) +ln(N)
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\text{Quotient Rule: } \ln\left(\frac{M}{N}\right)=\ln(M) - \ln(N) 
+\end{equation}
+\vspace{-0.6cm}
+\begin{equation}
+\text{Power Rule: } \ln(M^r) = r \cdot \ln(M)
+\end{equation}
+
+\end{tcolorbox}
+
+%%%Examples %%%
+\begin{example}
+Given $ln(x)+ln(x^2)-ln(x^4)$, simplify the expression and write your answer in terms of $ln(x)$.
+    %%short answer
+    \begin{sol}
+    $-ln(x)$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Which of the following is algebraically equivalent to the expression: $\bm{ln(8x^3)}$? HINT: $8=2^3$\\
+\onehalfspacing{
+    \begin{enumInline1}
+    \item $3\cdot ln(8x)$
+    \item $[3\cdot ln(2)]\cdot [3\cdot ln(x)]$
+    \item $3\cdot ln(2x)$ 
+    \item $3\cdot [ln(8)+ln(x)]$ 
+   
+    \end{enumInline1} }
+    %%short answer
+    \begin{sol}
+    c
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln(\sqrt{x})-2\cdot ln(3)=0$
+
+    %%short answer
+    \begin{sol}
+    $x=81$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln(x^2)-ln(2x)+1=0$
+
+    %%short answer
+    \begin{sol}
+    $x=\displaystyle\frac{2}{e}$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln(x+4)-ln(x-2)+1=ln(x)$
+
+    %%short answer
+    \begin{sol}
+    $x=4$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln(x^3)-4\cdot ln(x)=1$
+
+    %%short answer
+    \begin{sol}
+    $x=\displaystyle\frac{1}{e}$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Solve for $x$: $ln(x+1)-ln(x)=1$
+
+    %%short answer
+    \begin{sol}
+    $x=\displaystyle\frac{1}{e-1}$
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+Find the derivative of the function $f(x)=ln\left(\displaystyle\frac{x}{x+1}\right)$.
+NOTE:  Use properties of logs to re-write the function before differentiating.	Simply your answer. 
+
+    %%short answer
+    \begin{sol}
+    $f'(x)=\displaystyle\frac{1}{x(x+1)}$ or \displaystyle\frac{1}{x^2+x}
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{2}}
+\begin{example}
+Find the derivative of the function $f(x)=ln\left[(x+1)(x^2-1)\right]$.
+NOTE:  Use properties of logs to re-write the function before differentiating.	Simply your answer. 
+
+    %%short answer
+    \begin{sol}
+    $f'(x)=\displaystyle\frac{3x-1}{(x+1)(x-1)}$ or \displaystyle\frac{3x-1}{x^2-1}
+    \end{sol}
+    %%solution
+    \begin{solL}
+    Complete solution here.....
+    
+    \end{solL}
+    
+\end{example}
+\vspace*{\stretch{1}}
+%%%%%%%%%%%%End Examples%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%End Topic%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%End Lesson%%%%%%%%%%%%%%%%%%
+\Closesolutionfile{ans}
+\Closesolutionfile{ansL}
+
+%%%Short Answers to Examples%%%
+%\newpage
+\vspace*{\fill}
+
+\subsection*{Short Answers to Examples}
+%\vspace{-0.25cm}
+\begin{multicols}{2}
+\input{ans16}
+\end{multicols}
+
+
